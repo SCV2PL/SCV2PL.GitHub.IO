@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
-SERVICE_ACCOUNT_FILE = '/home/luke_green_player/Startup_Files/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
