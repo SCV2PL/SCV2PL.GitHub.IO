@@ -19,6 +19,21 @@ browser.find_element_by_css_selector('.button.is-primary').click()
 time.sleep(15)
 
 
+browser.get('https://app.datawrapper.de/chart/0oa9H/describe')
+time.sleep(10)
+browser.get('https://app.datawrapper.de/chart/0oa9H/publish')
+time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+browser.get('https://app.datawrapper.de/chart/OY7HS/describe')
+time.sleep(10)
+browser.get('https://app.datawrapper.de/chart/OY7HS/publish')
+time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+
 browser.get('https://app.datawrapper.de/chart/sGUaJ/describe')
 time.sleep(10)
 browser.get('https://app.datawrapper.de/chart/sGUaJ/publish')
@@ -188,4 +203,5 @@ browser.get('https://scv2pl.github.io/scv2pl-en')
 
 print("All Operations - Successfully!")
 
-#browser.implicitly_wait(10)
+# python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
+# browser.implicitly_wait(10)
