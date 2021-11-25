@@ -1,7 +1,8 @@
 .hr1 {
 background: white;
 height: 9px;
-border: 1px
+border: 1px;
+line-height: 0px 
 }
 
 .hr2 {
