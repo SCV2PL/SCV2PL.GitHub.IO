@@ -8,15 +8,16 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM'
+SPREADSHEET_ID = '1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM'
 
 service = build('sheets', 'v4', credentials=creds)
 
 sheet = service.spreadsheets()
 
-request1 = sheet.values().clear(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
+
+request1 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
                                range="ir28!B4:C30").execute()
-request2 = sheet.values().clear(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
+request2 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
                                range="fdr21!B4:C23").execute()
 
 print(request1, request2)

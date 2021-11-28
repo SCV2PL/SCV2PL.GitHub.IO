@@ -8,15 +8,13 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-# The ID spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
+SPREADSHEET_ID = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
 
 service = build('sheets', 'v4', credentials=creds)
 
-# Call the Sheets API
 sheet = service.spreadsheets()
                                
-request1 = sheet.values().clear(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
+request1 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
                                range="XY!H2:H380").execute()
                               
 print(request1)
