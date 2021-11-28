@@ -8,16 +8,14 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-# The ID spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM'
+SPREADSHEET_ID = '1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM'
 
 service = build('sheets', 'v4', credentials=creds)
 
-# Call the Sheets API
 sheet = service.spreadsheets()
 
 
-result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="Średnia 7 dni SARS-CoV-2!A253").execute()
 values = result.get('values', [])
 
@@ -35,11 +33,11 @@ RUN1 = [["16590","24239","24882","23242","23414","18883",'=IMPORTRANGE("https://
         
         ['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-22!B2")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-23!B2")','=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-24!B2")','=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-25!B2")','=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-26!B2")','=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-27!B2")','=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-28!B2")']]
         
-request1 = service.spreadsheets().values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="Średnia 7 dni SARS-CoV-2!A253", valueInputOption="USER_ENTERED", body={"values":RUN1}).execute()
                                                  
                                                  
-result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="Średnia 7 dni SARS-CoV-2!M253").execute()
 values = result.get('values', [])
 
@@ -57,11 +55,8 @@ RUN2 = [['=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iD
         
         ['=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-28!H2"))','=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-11-28!D2"))']]
         
-request2 = service.spreadsheets().values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="Średnia 7 dni SARS-CoV-2!M253", valueInputOption="USER_ENTERED", body={"values":RUN2}).execute()                                                 
-                                                 
-
-
 
 print(request1, request2)
 
