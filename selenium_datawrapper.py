@@ -34,21 +34,6 @@ browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
 
 
-browser.get('https://app.datawrapper.de/chart/sGUaJ/describe')
-time.sleep(10)
-browser.get('https://app.datawrapper.de/chart/sGUaJ/publish')
-time.sleep(10)
-browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
-time.sleep(10)
-
-browser.get('https://app.datawrapper.de/chart/lAQGz/describe')
-time.sleep(10)
-browser.get('https://app.datawrapper.de/chart/lAQGz/publish')
-time.sleep(10)
-browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
-time.sleep(10)
-
-
 browser.get('https://app.datawrapper.de/table/NRnYP/describe')
 time.sleep(10)
 browser.get('https://app.datawrapper.de/table/NRnYP/publish')
@@ -59,6 +44,21 @@ time.sleep(10)
 browser.get('https://app.datawrapper.de/table/ql6mK/describe')
 time.sleep(10)
 browser.get('https://app.datawrapper.de/table/ql6mK/publish')
+time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+
+browser.get('https://app.datawrapper.de/chart/sGUaJ/describe')
+time.sleep(10)
+browser.get('https://app.datawrapper.de/chart/sGUaJ/publish')
+time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+browser.get('https://app.datawrapper.de/chart/lAQGz/describe')
+time.sleep(10)
+browser.get('https://app.datawrapper.de/chart/lAQGz/publish')
 time.sleep(10)
 browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
@@ -90,6 +90,21 @@ browser.get('https://app.datawrapper.de/chart/pI4kl/describe')
 time.sleep(10)
 browser.get('https://app.datawrapper.de/chart/pI4kl/publish')
 time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+
+browser.get('https://app.datawrapper.de/map/6gcHP/data')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/map/6gcHP/publish')
+time.sleep(15)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+browser.get('https://app.datawrapper.de/map/OXWIx/data')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/map/OXWIx/publish')
+time.sleep(15)
 browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
 
@@ -139,6 +154,21 @@ browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
 
 
+browser.get('https://app.datawrapper.de/map/t8Zde/data')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/map/t8Zde/publish')
+time.sleep(15)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+browser.get('https://app.datawrapper.de/map/QhOyR/data')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/map/QhOyR/publish')
+time.sleep(15)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+
 browser.get('https://app.datawrapper.de/map/No277/data')
 time.sleep(15)
 browser.get('https://app.datawrapper.de/map/No277/publish')
@@ -152,6 +182,20 @@ browser.get('https://app.datawrapper.de/map/FJtlg/publish')
 time.sleep(15)
 browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
+
+
+browser.get('https://app.datawrapper.de/chart/Z1REC/describe')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/chart/Z1REC/publish')
+time.sleep(15)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+browser.get('https://app.datawrapper.de/chart/d1FPI/describe')
+time.sleep(15)
+browser.get('https://app.datawrapper.de/chart/d1FPI/publish')
+time.sleep(15)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 
 
 browser.get('https://app.datawrapper.de/chart/HyYXt/describe')
