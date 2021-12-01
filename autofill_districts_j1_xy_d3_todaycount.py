@@ -15,7 +15,6 @@ sheet_id2 = '14006599'
 service = build('sheets', 'v4', credentials=creds)
 
 RUN1 = {'requests': [
-    # currency format for column E (E2:E7)
     {'autoFill': {
         'range': {
             'sheetId': sheet_id1,
@@ -33,7 +32,6 @@ request1 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id, body=RUN1).execute()
 
 RUN2 = {'requests': [
-    # currency format for column E (E2:E7)
     {'autoFill': {
         'range': {
             'sheetId': sheet_id2,
