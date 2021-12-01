@@ -19,7 +19,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="ir28!B3").execute()
 values = result.get('values', [])
 
-RUN1 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!H231:H258")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!I231:I258")']]
+RUN1 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!H236:H263")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!I236:I263")']]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="ir28!B3", valueInputOption="USER_ENTERED", body={"values":RUN1}).execute()
@@ -29,7 +29,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="fdr21!B3").execute()
 values = result.get('values', [])
 
-RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!O238:O258")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!P238:P258")']]
+RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!O243:O263")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1D_ykOMbV2CdHMzLGT1nPZxpLEyyNEln8nhFIn5nwsQM","Średnia 7 dni SARS-CoV-2!P243:P263")']]
 
 request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="fdr21!B3", valueInputOption="USER_ENTERED", body={"values":RUN2}).execute()
@@ -39,7 +39,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="dr!A1").execute()
 values = result.get('values', [])
 
-RUN3 = [["='Średnia 7 dni SARS-CoV-2'!L258"]]
+RUN3 = [["='Średnia 7 dni SARS-CoV-2'!L263"]]
 
 request3 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="dr!A1", valueInputOption="USER_ENTERED", body={"values":RUN3}).execute()                                                
