@@ -22,4 +22,6 @@ python3 /home/luke_blue/Startup_Files/daily_update/update_districts_avrxypl.py
 
 python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
 
+python3 /home/luke_blue/Startup_Files/block_range_avr7d10000todaysumd_districtsxyf.py
+
 # vim /etc/init.d/startupscript.sh
