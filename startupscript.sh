@@ -26,4 +26,6 @@ python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
 
 python3 /home/luke_blue/Startup_Files/block_range_avr7d10000todaysumd_districtsxyf.py
 
+python3 /home/luke_blue/Startup_Files/save_daily_sum.py
+
 # vim /etc/init.d/startupscript.sh
