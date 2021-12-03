@@ -1,5 +1,7 @@
 #!/bin/sh
 
+python3 /home/luke_blue/Startup_Files/import_csv_data_from_urls.py
+
 python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
 
 python3 /home/luke_blue/Startup_Files/clear_districts_j1_xy_d3_todaycount.py
