@@ -1,5 +1,5 @@
 #!/bin/sh
-# daily update line 13, 16, 24, 32 , 36, 42, 92, 100, 105, 111, 160, 164
+# daily update line 13, 16, 24, 32 , 36, 42, 92, 101, 106, 112, 163, 166
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_urls.py
 # daily update line 22, 32
 python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
