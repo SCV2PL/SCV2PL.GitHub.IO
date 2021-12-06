@@ -17,9 +17,11 @@ service = build('sheets', 'v4', credentials=creds)
 
 sheet = service.spreadsheets()
 
+
 request1 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWPZ!A1:X4958").execute()
 print(request1)
+
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id1,
                             range="PWPZ!A2480").execute()
@@ -34,6 +36,7 @@ request2 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
                                                   valueInputOption="USER_ENTERED", body={"values": RUN2}).execute()
 print(request2)
 time.sleep(3)
+
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id1,
                             range="PWPZ!A1").execute()
@@ -91,11 +94,11 @@ request5 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN5).execute()
 print(request5)
 
+
 request6 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWPZ!A2480:X4958").execute()
 print(request6)
 time.sleep(20)
-
 
 RUN7 = {'requests': [
     {
@@ -148,9 +151,11 @@ request8 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN8).execute()
 print(request8)
 
+
 request9 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWPZ!G1:G188").execute()
 print(request9)
+
 
 request10 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWPZ!K1:K188").execute()
@@ -180,6 +185,7 @@ RUN10 = {'requests': [
 request10 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN10).execute()
 print(request10)
+
 
 request11 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWP!A2:L2479").execute()
