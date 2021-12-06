@@ -10,10 +10,10 @@ creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 spreadsheet_id1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
-sheet_id1 = '703985656'
+sheet_id1 = '20211207'
 
 spreadsheet_id2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
-sheet_id2 = '512598598'
+sheet_id2 = '20211207'
 
 service = build('sheets', 'v4', credentials=creds)
 
@@ -21,7 +21,7 @@ sheet = service.spreadsheets()
 
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id1,
-                            range="2021-12-04!A19").execute()
+                            range="2021-12-07!A19").execute()
 values = result.get('values', [])
 
 RUN1 = [['https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data'],
@@ -29,17 +29,17 @@ RUN1 = [['https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156
         ['=IMPORTDATA(A19)']]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
-                                                  range="2021-12-04!A19",
+                                                  range="2021-12-07!A19",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN1}).execute()
 time.sleep(3)
 result = sheet.values().get(spreadsheetId=spreadsheet_id1,
-                            range="2021-12-04!A1").execute()
+                            range="2021-12-07!A1").execute()
 values = result.get('values', [])
 
 RUN2 = [['=SPLIT(A20;";")']]
 
 request2 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
-                                                  range="2021-12-04!A1",
+                                                  range="2021-12-07!A1",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN2}).execute()
 print(request1, request2)
 
@@ -90,7 +90,7 @@ print(request4)
 
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id2,
-                            range="2021-12-04!A383").execute()
+                            range="2021-12-07!A383").execute()
 values = result.get('values', [])
 
 RUN5 = [['https://www.arcgis.com/sharing/rest/content/items/6ff45d6b5b224632a672e764e04e8394/data'],
@@ -98,18 +98,18 @@ RUN5 = [['https://www.arcgis.com/sharing/rest/content/items/6ff45d6b5b224632a672
         ['=IMPORTDATA(A383)']]
 
 request5 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id2,
-                                                  range="2021-12-04!A383",
+                                                  range="2021-12-07!A383",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN5}).execute()
 
 time.sleep(3)
 result = sheet.values().get(spreadsheetId=spreadsheet_id2,
-                            range="2021-12-04!A1").execute()
+                            range="2021-12-07!A1").execute()
 values = result.get('values', [])
 
 RUN6 = [['=SPLIT(A384;";")']]
 
 request6 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id2,
-                                                  range="2021-12-04!A1",
+                                                  range="2021-12-07!A1",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN6}).execute()
 print(request5, request6)
 
@@ -160,10 +160,10 @@ print(request8)
 
 
 request9 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
-                                range="2021-12-04!A19:A20").execute()
+                                range="2021-12-07!A19:A20").execute()
 
 request10 = sheet.values().clear(spreadsheetId=spreadsheet_id2,
-                                range="2021-12-04!A383:A384").execute()
+                                range="2021-12-07!A383:A384").execute()
 
 print(request9, request10, "(All Operations - Successfully!)")
 

@@ -1,5 +1,6 @@
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+import time
 
 SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -21,8 +22,8 @@ sheet = service.spreadsheets()
 RUN1 = {'requests': [
     {'addSheet': {
         'properties': {
-            "sheetId": 1,
-            "title": '2021-12-03 - SUM',
+            "sheetId": 20211207,
+            "title": '2021-12-07 - SUM',
         },
 
     }},
@@ -37,8 +38,8 @@ print(request1)
 RUN2 = {'requests': [
     {'addSheet': {
         'properties': {
-            "sheetId": 1,
-            "title": '2021-12-03 - SUM',
+            "sheetId": 5,
+            "title": '2021-12-07 - SUM',
         },
 
     }},
@@ -60,7 +61,7 @@ RUN3 = {'requests': [
             'endColumnIndex': 16,
         },
         "destination": {
-            'sheetId': 1,
+            'sheetId': 20211207,
             'startRowIndex': 0,
             'endRowIndex': 382,
             'startColumnIndex': 4,
@@ -85,7 +86,7 @@ RUN4 = {'requests': [
             'endColumnIndex': 11,
         },
         "destination": {
-            'sheetId': 1,
+            'sheetId': 5,
             'startRowIndex': 0,
             'endRowIndex': 380,
             'startColumnIndex': 2,

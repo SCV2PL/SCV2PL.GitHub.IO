@@ -27,7 +27,7 @@ result = sheet.values().get(spreadsheetId=spreadsheet_id1,
                             range="PWPZ!A2480").execute()
 values = result.get('values', [])
 
-RUN2 = [['https://api.dane.gov.pl/media/resources/20211206/poziom_wyszczepienia_mieszka%C5%84c%C3%B3w_gmin_w_dniu_20211205_wska%C5%BAniki.csv'],
+RUN2 = [['https://api.dane.gov.pl/media/resources/20211207/poziom_wyszczepienia_mieszka%C5%84c%C3%B3w_gmin_w_dniu_20211206_wska%C5%BAniki.csv'],
 
         ['=IMPORTDATA(A2480)']]
 

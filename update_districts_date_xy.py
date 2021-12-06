@@ -19,7 +19,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="XY!C1").execute()
 values = result.get('values', [])
 
-RUN1 = [['2021-12-02 10:30:00']]
+RUN1 = [['2021-12-07 10:35:00']]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="XY!C1", valueInputOption="USER_ENTERED", body={"values":RUN1}).execute()

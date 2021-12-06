@@ -19,7 +19,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="XY!J1").execute()
 values = result.get('values', [])
 
-RUN1 = [["=({'20211119'!E3}+{'2021-11-20'!E3}+{'2021-11-21'!E3}+{'2021-11-22'!E3}+{'2021-11-23'!E3}+{'2021-11-24'!E3}+{'2021-11-25'!E3}+{'2021-11-26'!E3}+{'2021-11-27'!E3}+{'2021-11-28'!E3}+{'2021-11-29'!E3}+{'2021-11-30'!E3}+{'2021-12-01'!E3}+{'2021-12-02'!E3})/K1"]]
+RUN1 = [["=({'2021-11-24'!E3}+{'2021-11-25'!E3}+{'2021-11-26'!E3}+{'2021-11-27'!E3}+{'2021-11-28'!E3}+{'2021-11-29'!E3}+{'2021-11-30'!E3}+{'2021-12-01'!E3}+{'2021-12-02'!E3}+{'2021-12-03'!E3}+{'2021-12-04'!E3}+{'2021-12-05'!E3}+{'2021-12-06'!E3}+{'2021-12-07'!E3})/K1"]]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                   range="XY!J1", valueInputOption="USER_ENTERED",
@@ -29,7 +29,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="TodayCount!D3").execute()
 values = result.get('values', [])
 
-RUN2 = [["={'2021-11-26'!D3}+{'2021-11-27'!D3}+{'2021-11-28'!D3}+{'2021-11-29'!D3}+{'2021-11-30'!D3}+{'2021-12-01'!D3}+{'2021-12-02'!D3}"]]
+RUN2 = [["={'2021-12-01'!D3}+{'2021-12-02'!D3}+{'2021-12-03'!D3}+{'2021-12-04'!D3}+{'2021-12-05'!D3}+{'2021-12-06'!D3}+{'2021-12-07'!D3}"]]
 
 request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                   range="TodayCount!D3", valueInputOption="USER_ENTERED",
