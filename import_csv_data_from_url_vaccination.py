@@ -49,6 +49,7 @@ request3 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
                                                   valueInputOption="USER_ENTERED", body={"values": RUN3}).execute()
 print(request3)
 
+
 RUN4 = {'requests': [
     {'autoFill': {
         'range': {
@@ -67,6 +68,7 @@ request4 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN4).execute()
 print(request4)
 time.sleep(30)
+
 
 RUN5 = {'requests': [
     {'copyPaste': {
@@ -100,6 +102,7 @@ request6 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
 print(request6)
 time.sleep(20)
 
+
 RUN7 = {'requests': [
     {
       'sortRange': {
@@ -124,6 +127,7 @@ RUN7 = {'requests': [
 request7 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN7).execute()
 print(request7)
+
 
 RUN8 = {'requests': [
     {'copyPaste': {
@@ -161,6 +165,7 @@ request10 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWPZ!K1:K188").execute()
 print(request10)
 
+
 RUN10 = {'requests': [
     {
       'sortRange': {
@@ -190,6 +195,7 @@ print(request10)
 request11 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
                                 range="PWP!A2:L2479").execute()
 print(request11)
+
 
 RUN12 = {'requests': [
     {'copyPaste': {
