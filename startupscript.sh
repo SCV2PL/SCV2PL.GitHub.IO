@@ -9,7 +9,7 @@ python3 /home/luke_blue/Startup_Files/clear_districts_j1_xy_d3_todaycount.py
 python3 /home/luke_blue/Startup_Files/autofill_districts_j1_xy_d3_todaycount.py
 
 python3 /home/luke_blue/Startup_Files/clear_districts_date_xy.py
-# daily update line 22
+
 python3 /home/luke_blue/Startup_Files/update_districts_date_xy.py
 
 python3 /home/luke_blue/Startup_Files/clear_avr7d10000_todaysum_xy_support.py
