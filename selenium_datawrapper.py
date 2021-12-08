@@ -242,6 +242,14 @@ browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
 time.sleep(10)
 
 
+browser.get('https://app.datawrapper.de/chart/cyZL2/describe')
+time.sleep(10)
+browser.get('https://app.datawrapper.de/chart/cyZL2/publish')
+time.sleep(10)
+browser.find_element_by_css_selector('.button-wrapper.svelte-di7o7w').click()
+time.sleep(10)
+
+
 browser.get('https://scv2pl.github.io/scv2pl-en')
 
 
