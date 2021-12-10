@@ -181,3 +181,12 @@ background-color: #98c13d !important;
   border-radius: 25px;
   border: 3px solid red;
 }
+
+
+iframe.myframe1 {
+    background: #169dd5;
+}
+
+iframe.myframe2 {
+    background: #98c13d;
+}
