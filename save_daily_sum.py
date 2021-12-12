@@ -9,10 +9,10 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-spreadsheet_id1 = '1y3Anj7SQ7kiF0rB1xekKoKh4dx_oi-YlT6ytOuK_5AA'
+spreadsheet_id1 = '1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0'
 sheet_id1 = '335219542'
 
-spreadsheet_id2 = '1J2wXEEGoYDMRtC-xGz_22mcynGBsX2O3UUbITu6bF5Y'
+spreadsheet_id2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
 sheet_id2 = '0'
 
 service = build('sheets', 'v4', credentials=creds)
