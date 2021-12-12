@@ -77,8 +77,6 @@ request3 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN3).execute()
         
 
-        
-
 RUN4 = {'requests': [
     {'copyPaste': {
         'source': {
@@ -86,10 +84,10 @@ RUN4 = {'requests': [
             'startRowIndex': 0,
             'endRowIndex': 380,
             'startColumnIndex': 2,
-            'endColumnIndex': 12,
+            'endColumnIndex': 11,
         },
         "destination": {
-            'sheetId': 9,
+            'sheetId': 10,
             'startRowIndex': 0,
             'endRowIndex': 380,
             'startColumnIndex': 2,

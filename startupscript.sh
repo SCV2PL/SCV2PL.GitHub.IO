@@ -27,7 +27,7 @@ python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
 python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
 
 python3 /home/luke_blue/Startup_Files/block_range_avr7d10000todaysumd_districtsxyf.py
-# daily update line 25, 26, 41, 42, 64, 89, 113, 140
+# daily update line 25, 26, 41, 42, 64, 90, 111, 138
 python3 /home/luke_blue/Startup_Files/save_daily_sum.py
 
 # vim /etc/init.d/startupscript.sh
