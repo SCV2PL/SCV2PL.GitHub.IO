@@ -20,15 +20,15 @@ RUN1 = {'requests': [
     {'copyPaste': {
         'source': {
             'sheetId': sheet_id,
-            'startRowIndex': 261,
-            'endRowIndex': 266,
+            'startRowIndex': 266,
+            'endRowIndex': 273,
             'startColumnIndex': 0,
             'endColumnIndex': 16,
         },
         "destination": {
             'sheetId': sheet_id,
-            'startRowIndex': 268,
-            'endRowIndex': 273,
+            'startRowIndex': 273,
+            'endRowIndex': 280,
             'startColumnIndex': 0,
             'endColumnIndex': 16,
         },
@@ -46,15 +46,15 @@ RUN2 = {'requests': [
     {'copyPaste': {
         'source': {
             'sheetId': sheet_id,
-            'startRowIndex': 259,
-            'endRowIndex': 266,
+            'startRowIndex': 266,
+            'endRowIndex': 273,
             'startColumnIndex': 7,
             'endColumnIndex': 16,
         },
         "destination": {
             'sheetId': sheet_id,
-            'startRowIndex': 266,
-            'endRowIndex': 273,
+            'startRowIndex': 273,
+            'endRowIndex': 280,
             'startColumnIndex': 7,
             'endColumnIndex': 16,
         },
@@ -72,15 +72,15 @@ RUN3 = {'requests': [
     {'copyPaste': {
         'source': {
             'sheetId': sheet_id,
-            'startRowIndex': 259,
-            'endRowIndex': 266,
+            'startRowIndex': 266,
+            'endRowIndex': 273,
             'startColumnIndex': 0,
             'endColumnIndex': 16,
         },
         "destination": {
             'sheetId': sheet_id,
-            'startRowIndex': 259,
-            'endRowIndex': 266,
+            'startRowIndex': 266,
+            'endRowIndex': 273,
             'startColumnIndex': 0,
             'endColumnIndex': 16,
         },
@@ -95,90 +95,90 @@ request3 = service.spreadsheets().batchUpdate(
 print(request3)
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id,
-                            range="Średnia 7 dni SARS-CoV-2!A267").execute()
+                            range="Średnia 7 dni SARS-CoV-2!A274").execute()
 values = result.get('values', [])
 
-RUN4 = [["=B266", "=C266", "=D266", "=E266", "=F266", "=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")'],
+RUN4 = [["=B273", "=C273", "=D273", "=E273", "=F273", "=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")'],
 
-        ["=C266", "=D266", "=E266", "=F266", "=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")'],
+        ["=C273", "=D273", "=E273", "=F273", "=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")'],
 
-        ["=D266", "=E266", "=F266", "=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!B2")'],
+        ["=D273", "=E273", "=F273", "=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!B2")'],
 
-        ["=E266", "=F266", "=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!B2")'],
+        ["=E273", "=F273", "=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!B2")'],
 
-        ["=F266", "=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-10!B2")'],
+        ["=F273", "=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-17!B2")'],
 
-        ["=G266",
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-10!B2")',
-         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-11!B2")'],
+        ["=G273",
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-17!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-18!B2")'],
 
         [
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-10!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-11!B2")',
-            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-12!B2")']]
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-17!B2")',
+         '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-18!B2")',
+            '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-119-12!B2")']]
 
 request4 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id,
-                                                  range="Średnia 7 dni SARS-CoV-2!A267",
+                                                  range="Średnia 7 dni SARS-CoV-2!A274",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN4}).execute()
 print(request4)
 
 result = sheet.values().get(spreadsheetId=spreadsheet_id,
-                            range="Średnia 7 dni SARS-CoV-2!M267").execute()
+                            range="Średnia 7 dni SARS-CoV-2!M274").execute()
 values = result.get('values', [])
 
 RUN5 = [[
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-06!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-13!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-07!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-14!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-08!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-15!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-09!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-16!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-10!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-10!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-17!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-17!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-11!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-11!D2"))'],
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-18!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-18!D2"))'],
 
         [
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-12!H2"))',
-            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-12!D2"))']]
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-19!H2"))',
+            '=IF(H:H="","",IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g", "2021-12-19!D2"))']]
 
 request5 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id,
-                                                  range="Średnia 7 dni SARS-CoV-2!M267",
+                                                  range="Średnia 7 dni SARS-CoV-2!M274",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN5}).execute()
 print(request5)
 
