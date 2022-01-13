@@ -37,7 +37,7 @@ app.layout = html.Div([
     html.H1(children=''),
 
     html.Div(children='''
-        14 Dniowa Suma Zgonów / 10000 Mieszkańców z Populacji Dla Danego Regionu - Na Poziomie Powiatów vs Poziom Zaszczepienia (%) & Linia Trendu Logarytmicznego: Dla Szczytu z Dnia 2021-12-30.
+        14 Dniowa Suma Zgonów / 10000 Mieszkańców z Populacji Dla Danego Regionu - Na Poziomie Powiatów vs Poziom Zaszczepienia (%): Dla Szczytu z Dnia 2021-12-30.
     '''),
     html.A(
         html.Button("Download HTML"), 
