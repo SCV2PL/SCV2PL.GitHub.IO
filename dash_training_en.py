@@ -15,8 +15,9 @@ buffer = io.StringIO()
 app = dash.Dash(__name__)
 
 colors = {
-    'background': '#111111',
-    'text': '#7FDBFF'
+    'background': '#313b4e',
+    'text': '#169dd5'
+    
 }
 
 df = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vT9R_mgljVOgzZIxM486fwlpk3WP10CA-rkZvfVIDNU2DqxL3gu7RRL7szZbZshWP8hcW2qKQPLJkBo/pub?gid=1516485369&single=true&output=csv')
@@ -24,6 +25,12 @@ df = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vT9R_mgljVOgzZ
 fig = px.scatter(df, x="% Vaccinations", y="Deaths / 10000 inhabitants",
                  size="Population / 10000", color="Voivodeship", hover_name="District",
                  log_x=True, size_max=60)
+                 
+fig.update_layout(
+    plot_bgcolor=colors['background'],
+    paper_bgcolor=colors['background'],
+    font_color=colors['text']
+)
 
 fig.write_html(buffer)
                  
