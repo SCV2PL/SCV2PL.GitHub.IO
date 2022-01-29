@@ -1,6 +1,7 @@
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import time
+from datetime import datetime, timedelta
 
 SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -8,6 +9,15 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = None
 creds = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    
+    
+#a = datetime.today().strftime('%Y%m%d')
+yesterday = datetime.today() - timedelta(days=1)
+a = yesterday.strftime('%Y%m%d')
+yesterday1 = datetime.today() - timedelta(days=2)
+#b = yesterday.strftime('%Y%m%d')
+b = yesterday1.strftime('%Y%m%d')
+    
 
 spreadsheet_id1 = '1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0'
 sheet_id1 = '1705435509'
@@ -27,7 +37,7 @@ result = sheet.values().get(spreadsheetId=spreadsheet_id1,
                             range="PWPZ!A2480").execute()
 values = result.get('values', [])
 
-RUN2 = [['https://api.dane.gov.pl/media/resources/20211207/poziom_wyszczepienia_mieszka%C5%84c%C3%B3w_gmin_w_dniu_20211206_wska%C5%BAniki.csv'],
+RUN2 = [['https://api.dane.gov.pl/media/resources/'+str(a)+'/poziom_wyszczepienia_mieszka%C5%84c%C3%B3w_gmin_w_dniu_'+str(b)+'_wska%C5%BAniki.csv'],
 
         ['=IMPORTDATA(A2480)']]
 
