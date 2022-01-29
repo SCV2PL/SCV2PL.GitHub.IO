@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2022-01-29 - full automation for daily update line 18, 21, 29, 37 , 36, 47, 98, 106, 111, 117, 168, 171
+# 2022-01-29 - full automation for daily update, lines: 18, 21, 29, 37 , 36, 47, 98, 106, 111, 117, 168, 171
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_urls.py
 # daily update line 22, 32
 python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
@@ -17,19 +17,19 @@ python3 /home/luke_blue/Startup_Files/clear_avr7d10000_todaysum_xy_support.py
 python3 /home/luke_blue/Startup_Files/update_avr7d10000_todaysum_xy_support.py
 
 python3 /home/luke_blue/Startup_Files/clear_avr7d_ir28_fdr21.py
-# 2022-01-29 - full automation test for daily update line 33, 43, 53
+# 2022-01-29 - full automation for daily update, lines: 33, 43, 53
 python3 /home/luke_blue/Startup_Files/update_avr7d_ir28_fdr21.py
 # daily update line 22
 python3 /home/luke_blue/Startup_Files/update_districts_avrxypl.py
-# 2022-01-29 - full automation test for daily update line 30
+# 2022-01-29 - full automation for daily update, lines: 30
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
 
 python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
 
 python3 /home/luke_blue/Startup_Files/block_range_avr7d10000todaysumd_districtsxyf.py
-# 2022-01-29 - full automation test for daily update line 39, 40, 55, 56, 78, 104, 125, 152
+# 2022-01-29 - full automation for daily update, lines: 39, 40, 55, 56, 78, 104, 125, 152
 python3 /home/luke_blue/Startup_Files/save_daily_sum.py
-# 2022-01-29 - full automation test for daily update line 19, 27, 31, 39, 43, 49, 100
+# 2022-01-29 - full automation for daily update, lines: 19, 27, 31, 39, 43, 49, 100
 python3 /home/luke_blue/Startup_Files/correction_import_csv_data_for_voivodeships.py
 
 # vim /etc/init.d/startupscript.sh
