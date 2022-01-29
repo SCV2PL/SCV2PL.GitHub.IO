@@ -17,6 +17,7 @@ a = yesterday.strftime('%Y%m%d')
 yesterday1 = datetime.today() - timedelta(days=2)
 #b = yesterday.strftime('%Y%m%d')
 b = yesterday1.strftime('%Y%m%d')
+c = yesterday.strftime('%Y-%m-%d')
     
 
 spreadsheet_id1 = '1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0'
@@ -26,6 +27,17 @@ sheet_id2 = '2008036218'
 service = build('sheets', 'v4', credentials=creds)
 
 sheet = service.spreadsheets()
+
+
+result = sheet.values().get(spreadsheetId=spreadsheet_id1,
+                            range="pwp!Q2").execute()
+values = result.get('values', [])
+
+RUN0 = [[str(c)]]
+
+request2 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
+                                                  range="pwp!Q2",
+                                                  valueInputOption="USER_ENTERED", body={"values": RUN0}).execute()
 
 
 request1 = sheet.values().clear(spreadsheetId=spreadsheet_id1,
