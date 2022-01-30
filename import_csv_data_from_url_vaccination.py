@@ -12,12 +12,12 @@ creds = service_account.Credentials.from_service_account_file(
     
     
 #a = datetime.today().strftime('%Y%m%d')
-yesterday = datetime.today() - timedelta(days=1)
-a = yesterday.strftime('%Y%m%d')
-yesterday1 = datetime.today() - timedelta(days=2)
+yesterday1 = datetime.today() - timedelta(days=1)
+a = yesterday1.strftime('%Y%m%d')
+yesterday2 = datetime.today() - timedelta(days=2)
 #b = yesterday.strftime('%Y%m%d')
-b = yesterday1.strftime('%Y%m%d')
-c = yesterday.strftime('%Y-%m-%d')
+b = yesterday2.strftime('%Y%m%d')
+c = yesterday1.strftime('%Y-%m-%d')
     
 
 spreadsheet_id1 = '1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0'

@@ -1,7 +1,7 @@
 #!/bin/sh
 # 2022-01-29 - full automation for daily updates, lines: 18, 21, 29, 37 , 36, 47, 98, 106, 111, 117, 168, 171
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_urls.py
-# daily update line 22, 32
+# 2022-01-30 - full automation for daily updates, lines: 22, 32
 python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
 
 python3 /home/luke_blue/Startup_Files/clear_districts_j1_xy_d3_todaycount.py
@@ -19,7 +19,7 @@ python3 /home/luke_blue/Startup_Files/update_avr7d10000_todaysum_xy_support.py
 python3 /home/luke_blue/Startup_Files/clear_avr7d_ir28_fdr21.py
 # 2022-01-29 - full automation for daily updates, lines: 33, 43, 53
 python3 /home/luke_blue/Startup_Files/update_avr7d_ir28_fdr21.py
-# daily update line 22
+# 2022-01-30 - full automation for daily updates, lines: 22
 python3 /home/luke_blue/Startup_Files/update_districts_avrxypl.py
 # 2022-01-29 - full automation for daily updates, lines: 30
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
