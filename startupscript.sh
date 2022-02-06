@@ -23,6 +23,8 @@ python3 /home/luke_blue/Startup_Files/update_avr7d_ir28_fdr21.py
 python3 /home/luke_blue/Startup_Files/update_districts_avrxypl.py
 # 2022-01-29 - full automation for daily updates, lines: 30
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
+# 2022-02-06 full automation for app 
+python3 /home/luke_blue/Startup_Files/datawrapper_api_update_custom_lines.py
 
 python3 /home/luke_blue/Startup_Files/selenium_datawrapper.py
 

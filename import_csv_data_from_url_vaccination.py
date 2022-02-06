@@ -243,6 +243,7 @@ RUN12 = {'requests': [
 
 request12 = service.spreadsheets().batchUpdate(
         spreadsheetId=spreadsheet_id1, body=RUN12).execute()
+time.sleep(20)
 print(request12, "(All Operations - Successfully!)")
 
 # python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
