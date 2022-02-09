@@ -34,6 +34,6 @@ python3 /home/luke_blue/Startup_Files/block_range_avr7d10000todaysumd_districtsx
 # 2022-01-29 - full automation for daily updates, lines: 39, 40, 55, 56, 78, 104, 125, 152
 python3 /home/luke_blue/Startup_Files/save_daily_sum.py
 # 2022-01-29 - full automation for daily updates, lines: 19, 27, 31, 39, 43, 49, 100
-python3 /home/luke_blue/Startup_Files/correction_import_csv_data_for_voivodeships.py
+#python3 /home/luke_blue/Startup_Files/correction_import_csv_data_for_voivodeships.py
 
 # vim /etc/init.d/startupscript.sh
