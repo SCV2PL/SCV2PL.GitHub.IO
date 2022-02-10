@@ -4,7 +4,9 @@
 # 2022-02-08 22:32:00 Evening UPGRADE_2.0_APP Complete
 python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/import_csv_data_from_urls.py
 # 2022-01-30 - full automation for daily updates, lines: 22, 32
-python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
+#python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/update_districts_j1_xy_d3_todaycount.py
+# 2022-02-08 22:32:00 Evening UPGRADE_2.0_APP Complete
+python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/update_districts_j1_xy_d3_todaycount.py
 
 python3 /home/luke_blue/Startup_Files/clear_districts_j1_xy_d3_todaycount.py
 
@@ -22,7 +24,9 @@ python3 /home/luke_blue/Startup_Files/clear_avr7d_ir28_fdr21.py
 # 2022-01-29 - full automation for daily updates, lines: 33, 43, 53
 python3 /home/luke_blue/Startup_Files/update_avr7d_ir28_fdr21.py
 # 2022-01-30 - full automation for daily updates, lines: 22
-python3 /home/luke_blue/Startup_Files/update_districts_avrxypl.py
+# python3 /home/luke_blue/Startup_Files/update_districts_avrxypl.py
+# 2022-02-08 22:32:00 Evening UPGRADE_2.0_APP Complete
+python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/update_districts_avrxypl.py
 # 2022-01-29 - full automation for daily updates, lines: 30
 python3 /home/luke_blue/Startup_Files/import_csv_data_from_url_vaccination.py
 # 2022-02-06 full automation for app 
