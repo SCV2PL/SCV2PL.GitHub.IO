@@ -204,3 +204,8 @@ iframe.myframe1 {
 iframe.myframe2 {
     background: #98c13d;
 }
+
+iframe {
+  margin-top: 20px;
+  width: 400px;
+}
