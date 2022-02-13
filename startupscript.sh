@@ -46,9 +46,9 @@ python3 /home/luke_blue/Startup_Files/save_daily_sum.py
 python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/datawrapper_api_update_external_data.py
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
 # for sunday update
-python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/sunday_update/add_weekly_sheets_set.py
+# python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/sunday_update/add_weekly_sheets_set.py
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
 # for sunday update
-python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/sunday_update/update_avr7d_array_range_7d.py
+# python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/sunday_update/update_avr7d_array_range_7d.py
 
 # vim /etc/init.d/startupscript.sh
