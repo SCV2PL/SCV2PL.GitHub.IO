@@ -63,7 +63,7 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="XY!J1").execute()
 values = result.get('values', [])
 
-RUN1 = [["=({'"+str(n)+"'!E3}+{'"+str(m)+"'!E3}+{'"+str(l)+"'!E3}+{'"+str(k)+"'!E3}+{'"+str(j)+"'!E3}+{'"+str(i)+"'!E3}+{'"+str(h)+"'!E3}+{'"+str(g)+"'!E3}+{'"+str(f)+"'!E3}+{'"+str(e)+"'!E3}+{'"+str(d)+"'!E3}+{'"+str(c)+"'!E3}+{'"+str(b)+"'!E3}+{'"+str(a)+"'!E3})/K1"]]
+RUN1 = [["=({'"+str(n)+"'!E3}+{'"+str(m)+"'!E3}+{'"+str(l)+"'!E3}+{'"+str(k)+"'!I3}+{'"+str(j)+"'!I3}+{'"+str(i)+"'!I3}+{'"+str(h)+"'!I3}+{'"+str(g)+"'!I3}+{'"+str(f)+"'!I3}+{'"+str(e)+"'!I3}+{'"+str(d)+"'!I3}+{'"+str(c)+"'!I3}+{'"+str(b)+"'!I3}+{'"+str(a)+"'!I3})/K1"]]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                   range="XY!J1", valueInputOption="USER_ENTERED",
@@ -73,11 +73,11 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="TodayCount!D3").execute()
 values = result.get('values', [])
 
-RUN2 = [["={'"+str(g)+"'!D3}+{'"+str(f)+"'!D3}+{'"+str(e)+"'!D3}+{'"+str(d)+"'!D3}+{'"+str(c)+"'!D3}+{'"+str(b)+"'!D3}+{'"+str(a)+"'!D3}"]]
+RUN2 = [["={'"+str(g)+"'!H3}+{'"+str(f)+"'!H3}+{'"+str(e)+"'!H3}+{'"+str(d)+"'!H3}+{'"+str(c)+"'!H3}+{'"+str(b)+"'!H3}+{'"+str(a)+"'!H3}"]]
 
 request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                   range="TodayCount!D3", valueInputOption="USER_ENTERED",
                                                   body={"values": RUN2}).execute()
 print(request1, request2)
 
-# python3 /home/luke_blue/Startup_Files/update_districts_j1_xy_d3_todaycount.py
+# python3 /home/luke_blue/Startup_Files/UPGRADE_2.0_APP/update_districts_j1_xy_d3_todaycount.py
