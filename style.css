@@ -130,8 +130,8 @@ background-color: #98c13d !important;
 .button3 {
     background-color: #313b4e;
     border: none;
-    color: #98c13d;
-    width: 245px;
+    color: #169dd5;
+    width: 500px;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -143,7 +143,7 @@ background-color: #98c13d !important;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 6px;
-    border: 1px solid #98c13d;
+    border: 1px solid #169dd5;
 }
 
 .button3:hover {
