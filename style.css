@@ -1,29 +1,33 @@
 .hr1 {
 background: white;
 height: 9px;
-border: 1px;
-line-height: 0px; 
+border: 0px;
+/*line-height: 0px;*/
+margin: 0px 0px;
 }
 
 .hr2 {
 background: red;
 height: 9px;
-border: 1px;
-line-height: 0px; 
+border: 0px;
+/*line-height: 0px;*/
+margin: 0px 0px;
 }
 
 .hr3 {
 background: #169dd5;
 height: 9px;
 border: 1px;
-line-height: 0px; 
+line-height: 0px;
+margin: 0px 0px; 
 }
 
 .hr4 {
 background: #98c13d;
 height: 9px;
 border: 1px;
-line-height: 0px; 
+line-height: 0px;
+margin: 0px 0px; 
 }
 
 
@@ -79,7 +83,7 @@ background-color: #98c13d !important;
     background-color: #313b4e;
     border: none;
     color: #169dd5;
-    width: 100%;
+    width: 99%;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -105,7 +109,7 @@ background-color: #98c13d !important;
     background-color: #313b4e;
     border: none;
     color: #98c13d;
-    width: 100%;
+    width: 99%;
     height: 50px;
     line-height: 50px;
     text-align: center;
