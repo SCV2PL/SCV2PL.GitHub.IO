@@ -1,6 +1,6 @@
 .hr1 {
 background: white;
-height: 20px;
+height: 10px;
 border: 0px;
 /*line-height: 0px;*/
 margin: 0px 0px;
@@ -8,7 +8,7 @@ margin: 0px 0px;
 
 .hr2 {
 background: red;
-height: 20px;
+height: 10px;
 border: 0px;
 /*line-height: 0px;*/
 margin: 0px 0px;
@@ -63,14 +63,14 @@ color: red;
 .english {
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #169dd5
 }
 
 .polish {
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #98c13d
 }
 
@@ -90,18 +90,18 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 6px;
-    border: 3px solid #169dd5;
+    border: 1px solid #169dd5;
 }
 
 .button1:hover {
-    background-color: #169dd5;
+    background-color: #313b4e;
     color: red;
-    border: 3px solid red;
+    border: 1px solid red;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -116,18 +116,18 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 6px;
-    border: 3px solid #98c13d;
+    border: 1px solid #98c13d;
 }
 
 .button2:hover {
-    background-color: #98c13d;
+    background-color: #313b4e;
     color: red;
-    border: 3px solid red;
+    border: 1px solid red;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
