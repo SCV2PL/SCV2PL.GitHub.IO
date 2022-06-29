@@ -3,7 +3,7 @@ from google.oauth2 import service_account
 from pprint import pprint
 from datawrapper import Datawrapper
 
-SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -34,7 +34,7 @@ dw = Datawrapper(access_token = "********************")
 dw_id = 'gRs82'
 
 highlight_ranges = [
-    [str(b), 1.75, str(b), 20.25],
+    [str(b), 0, str(b), 9.5],
     [35, str(a), 75, str(a)]
 ]
 
@@ -46,17 +46,12 @@ metadata = {
     }
 }
 
-
 dw.update_metadata(dw_id, metadata)
-
-properties = dw.chart_properties(dw_id)
-
-print(properties)
 
 dw_id = 'qGF2F'
 
 highlight_ranges = [
-    [str(b), 1.75, str(b), 20.25],
+    [str(b), 0, str(b), 9.5],
     [35, str(a), 75, str(a)]
 ]
 
@@ -69,10 +64,6 @@ metadata = {
 }
 
 dw.update_metadata(dw_id, metadata)
-
-properties = dw.chart_properties(dw_id)
-
-print(properties)
 
 
 dw_id = 'BF3jL'
@@ -91,10 +82,6 @@ metadata = {
 
 dw.update_metadata(dw_id, metadata)
 
-properties = dw.chart_properties(dw_id)
-
-print(properties)
-
 dw_id = 'HyYXt'
 
 highlight_ranges = [
@@ -111,8 +98,4 @@ metadata = {
 
 dw.update_metadata(dw_id, metadata)
 
-properties = dw.chart_properties(dw_id)
-
-print(properties)
-
-# python3 /home/luke_blue/Startup_Files/datawrapper_api_update_custom_lines.py
+# python3 /app/datawrapper_api_update_custom_lines.py
