@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
-SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -50,4 +50,4 @@ request2 = service.spreadsheets().batchUpdate(
 
 print(request1, request2)
 
-# python3 /home/luke_blue/Startup_Files/autofill_districts_j1_xy_d3_todaycount.py
+# python3 /app/autofill_districts_j1_xy_d3_todaycount.py

@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
-SERVICE_ACCOUNT_FILE = '/home/luke_blue/Startup_Files/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -71,4 +71,4 @@ request6 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  
 print(request1, request2, request3, request4, request5, request6)
 
-# /home/luke_blue/Startup_Files/update_avr7d10000_todaysum_xy_support.py
+# /app/update_avr7d10000_todaysum_xy_support.py
