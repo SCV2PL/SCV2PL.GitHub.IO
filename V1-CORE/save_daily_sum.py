@@ -72,14 +72,14 @@ RUN3 = {'requests': [
             'startRowIndex': 0,
             'endRowIndex': 382,
             'startColumnIndex': 4,
-            'endColumnIndex': 16,
+            'endColumnIndex': 17,
         },
         "destination": {
             'sheetId': str(a),
             'startRowIndex': 0,
             'endRowIndex': 382,
             'startColumnIndex': 4,
-            'endColumnIndex': 16,
+            'endColumnIndex': 17,
         },
         "pasteType": "Paste_Values",
 
@@ -126,7 +126,7 @@ RUN5 = {"requests": [
             "startRowIndex": 0,
             "endRowIndex": 382,
             "startColumnIndex": 15,
-            "endColumnIndex": 16
+            "endColumnIndex": 17
         },
         "cell": {
             "userEnteredFormat": {
