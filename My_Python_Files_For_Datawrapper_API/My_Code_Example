@@ -1,0 +1,19 @@
+<iframe title="Zoning - SARS-CoV-2 Poland." aria-label="Map" id="datawrapper-chart-Il57Q" src="https://datawrapper.dwcdn.net/Il57Q/127/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="673"></iframe>
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+<select onchange="switchVis(this.value)">
+  <option value="Il57Q">Currently</option>
+	<option value="ss3HP">Vertex - 5 Wave</option>
+        <option value="nK681">1 Day Back</option>
+	<option value="ZJF26">2 Day Back</option>
+	<option value="FwfK3">3 Day Back</option>
+	<option value="omUrz">4 Day Back</option>
+	<option value="1cfR3">5 Day Back</option>
+	<option value="galdz">6 Day Back</option>
+	<option value="23zkY">7 Day Back</option>
+</select>
+<script>
+function switchVis(chartId) {
+  document.querySelector('iframe').src = 'https://datawrapper.dwcdn.net/' + chartId;
+}
+</script>
