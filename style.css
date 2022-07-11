@@ -63,14 +63,14 @@ color: red;
 .english {
 font-weight: 500;
 font-family: "Arial";
-font-size: 18px;
+font-size: 22px;
 color: #169dd5
 }
 
 .polish {
 font-weight: 500;
 font-family: "Arial";
-font-size: 18px;
+font-size: 22px;
 color: #98c13d
 }
 
@@ -84,13 +84,13 @@ background-color: #98c13d !important;
     border: none;
     color: #169dd5;
     width: 90%;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -110,13 +110,13 @@ background-color: #98c13d !important;
     border: none;
     color: #98c13d;
     width: 90%;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -136,13 +136,13 @@ background-color: #98c13d !important;
     border: none;
     color: #169dd5;
     width: 500px;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -162,13 +162,13 @@ background-color: #98c13d !important;
     border: none;
     color: #98c13d;
     width: 500px;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
