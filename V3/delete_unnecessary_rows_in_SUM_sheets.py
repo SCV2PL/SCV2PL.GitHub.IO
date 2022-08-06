@@ -4,7 +4,7 @@ import time
 from datetime import datetime, timedelta
 import yaml
 
-SERVICE_ACCOUNT_FILE = '/home/blox_land/scv2pl/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -22,7 +22,7 @@ sheet = service.spreadsheets()
 while True:
 
   config_vals = ""
-  with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "r") as cr:
+  with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "r") as cr:
      config_vals = yaml.full_load(cr)
 
   a = config_vals['a']
@@ -71,11 +71,11 @@ while True:
 
 
   config_vals['a'] = a - 1
-  with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True)
    
   config_vals['b'] = b + 1
-  with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True) 
    
   print("(All Operations - Successfully!)")
