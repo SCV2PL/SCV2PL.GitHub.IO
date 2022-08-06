@@ -21,7 +21,7 @@ service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
         
 config_vals = ""
-with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_"SUM"_sheets_py.yaml", "r") as cr:
+with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "r") as cr:
    config_vals = yaml.full_load(cr)
 
 a = config_vals['a']
@@ -70,11 +70,11 @@ print(request2)
 
 
 config_vals['a'] = a - 1
-with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_"SUM"_sheets_py.yaml", "w") as cw:
+with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
    yaml.dump(config_vals, cw, default_flow_style=True)
    
 config_vals['b'] = b + 1
-with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_"SUM"_sheets_py.yaml", "w") as cw:
+with open("/home/blox_land/scv2pl/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
    yaml.dump(config_vals, cw, default_flow_style=True) 
    
 print("(All Operations - Successfully!)")
