@@ -4,7 +4,7 @@ import time
 from datetime import datetime, timedelta
 import yaml
 
-SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/home/blox_land/scv2pl/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -18,8 +18,14 @@ service = build('sheets', 'v4', credentials=creds)
 
 sheet = service.spreadsheets()
 
+config_vals = ""
+with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "r") as cr:
+   config_vals = yaml.full_load(cr)
 
-while True:
+n = config_vals['n']
+
+
+while n > 0:
 
   config_vals = ""
   with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "r") as cr:
@@ -27,6 +33,7 @@ while True:
 
   a = config_vals['a']
   b = config_vals['b']
+  n = config_vals['n']
 
   yesterdayn = datetime.today() - timedelta(days=b)
   c = yesterdayn.strftime('%Y%m%d')
@@ -76,15 +83,15 @@ while True:
    
   config_vals['b'] = b + 1
   with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
+     yaml.dump(config_vals, cw, default_flow_style=True)
+     
+  config_vals['n'] = n - 1
+  with open("/app/config_for_delete_unnecessary_rows_in_SUM_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True) 
    
   print("(All Operations - Successfully!)")
 
-  check = input("Do you want to quit or start gain, enter Y to restart or another to end ?: ")
-
-  if check.upper() == "Y": #go back to the top
-
-    continue
+  continue
   
   print("EXIT...")
 
