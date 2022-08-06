@@ -48,11 +48,10 @@ python3 /app/update_Support_-_7DAVRDLR14D_t-t14_range.py
 python3 /app/datawrapper_api_update_external_data.py
 # 2022-08-06 - full automation for update changes
 python3 /app/datawrapper_api_republish_set_for_update_Support_-_7DAVRDLR14D_t-t14_range.py
+# for sunday update & cleaning
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
-# for sunday update
 python3 /app/sunday_update/add_weekly_sheets_set.py
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
-# for sunday update & cleaning
 python3 /app/sunday_update/update_avr7d_array_range_7d.py
 # for daily cleaning
 # 2022-08-06 - full automation for update changes: loop while repeat 3 times
