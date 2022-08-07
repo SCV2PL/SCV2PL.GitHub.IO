@@ -55,8 +55,11 @@ python3 /app/datawrapper_api_republish_set_for_update_Support_-_7DAVRDLR14D_t-t1
 #python3 /app/sunday_update/update_avr7d_array_range_7d.py
 # 2022-08-07 - full automation for update changes
 #python3 delete_weekly_sheets_set_-14-20D_range.py
+# 2022-08-07 - full automation for update changes
+#python3 datawrapper_api_republish_set_for_vacination_booster.py
 # for daily cleaning
 # 2022-08-06 - full automation for update changes: loop while repeat 3 times
+python3 /app/delete_unnecessary_rows_in_today_sheet.py
 python3 /app/delete_unnecessary_rows_in_SUM_sheets.py
 # 2022-08-06 - full automation for update changes
 python3 /app/update_n+4_for_config_for_delete_unnecessary_rows_in_SUM_sheets_py.py
