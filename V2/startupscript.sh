@@ -58,8 +58,9 @@ python3 /app/datawrapper_api_republish_set_for_update_Support_-_7DAVRDLR14D_t-t1
 # 2022-08-07 - full automation for update changes
 #python3 datawrapper_api_republish_set_for_vacination_booster.py
 # for daily cleaning
-# 2022-08-06 - full automation for update changes: loop while repeat 3 times
+# 2022-08-09 - full automation for update changes
 python3 /app/delete_unnecessary_rows_in_today_sheet.py
+# 2022-08-06 - full automation for update changes: loop while repeat 3 times
 python3 /app/delete_unnecessary_rows_in_SUM_sheets.py
 # 2022-08-06 - full automation for update changes
 python3 /app/update_n+4_for_config_for_delete_unnecessary_rows_in_SUM_sheets_py.py
