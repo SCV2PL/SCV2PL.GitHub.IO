@@ -64,6 +64,10 @@ python3 /app/delete_unnecessary_rows_in_today_sheet.py
 python3 /app/delete_unnecessary_rows_in_SUM_sheets.py
 # 2022-08-06 - full automation for update changes
 python3 /app/update_n+4_for_config_for_delete_unnecessary_rows_in_SUM_sheets_py.py
+# 2022-08-09 - full automation for update changes
+python3 /app/delete_unnecessary_rows_in_voivodeships_sheets.py
+# 2022-08-09 - full automation for update changes
+python3 /app/update_n+4_for_config_for_delete_unnecessary_rows_in_voivodeships_sheets_py.py
 # 2022-08-07 - full automation for update changes
 python3 /app/heroku_save_config_pyyaml_files_to_github.py
 
