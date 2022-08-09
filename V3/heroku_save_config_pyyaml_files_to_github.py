@@ -45,4 +45,15 @@ repo.update_file(contents4.path, "Save: config_for_update_avr7d_ir28_fdr21_py.ya
 
 print(content4)
 
+
+contents5 = repo.get_contents("config_for_delete_unnecessary_rows_in_voivodeships_sheets_py.yaml")
+with open('config_for_delete_unnecessary_rows_in_voivodeships_sheets_py.yaml', 'r') as file:
+    content5 = file.read()
+
+# update
+repo.update_file(contents5.path, "Save: config_for_delete_unnecessary_rows_in_voivodeships_sheets_py.yaml", content5, contents5.sha)
+
+print(content5)
+
+
 print("(All Operations - Successfully!)")
