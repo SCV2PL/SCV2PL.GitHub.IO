@@ -68,3 +68,5 @@ def populate_table(table_name: str, df: pd.DataFrame) -> None:
         run_syntax(db_connection=db_connection, syntax=f"INSERT INTO {table_name} VALUES{tuple(row.values)}")
     db_connection.commit()
     db_connection.close()
+
+    # https://towardsdatascience.com/how-to-build-a-relational-database-from-csv-files-using-python-and-heroku-20ea89a55c63?gi=29ed887411cc
