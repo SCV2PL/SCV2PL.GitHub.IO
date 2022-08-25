@@ -1,6 +1,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 from datetime import datetime, timedelta
+import time
 
 SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -63,15 +64,55 @@ sheet = service.spreadsheets()
 
 
 request1 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
-                               range="Support - 7DAVRDLR14D!R2:AF2").execute()
+                               range="Support - 7DAVRDLR14D!E2:AF381").execute()
 
 print(request1)
+
+
+RUN11 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","support!E1:Q380")']]
+
+request11 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
+                                                  range="Support - 7DAVRDLR14D!E2",
+                                                  valueInputOption="USER_ENTERED", body={"values": RUN11}).execute()
+time.sleep(30)
+print(request11)
+
 
 RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(o)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(n)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(m)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(l)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(k)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(j)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(i)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(h)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(g)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(f)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(e)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(d)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(c)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(b)+' - SUM!M1:M380")', '=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","'+str(a)+' - SUM!M1:M380")',]]
 
 request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                   range="Support - 7DAVRDLR14D!R2",
                                                   valueInputOption="USER_ENTERED", body={"values": RUN2}).execute()
+time.sleep(30)
 print(request2)
+
+
+RUN3 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': 1388511953,
+            'startRowIndex': 0,
+            'endRowIndex': 382,
+            'startColumnIndex': 4,
+            'endColumnIndex': 32,
+        },
+        "destination": {
+            'sheetId': 1388511953,
+            'startRowIndex': 0,
+            'endRowIndex': 382,
+            'startColumnIndex': 4,
+            'endColumnIndex': 32,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request3 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID, body=RUN3).execute()
+
+print(request3)
+
 
 print("(All Operations - Successfully!)")
