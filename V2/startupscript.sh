@@ -71,8 +71,12 @@ python3 /app/delete_unnecessary_rows_in_today_sheet.py
 #python3 /home/blox_land/scv2pl/delete_unnecessary_rows_in_voivodeships_sheets.py
 # 2022-08-09 - full automation for update changes
 #python3 /home/blox_land/scv2pl/update_n+4_for_config_for_delete_unnecessary_rows_in_voivodeships_sheets_py.py
+# 2022-12-06 - full automation for update changes
+python3 /app/delete_daily_unnecessary_sheets.py
+
+python3 update_n+2_for_config_for_delete_daily_unnecessary_sheets_py.py
 # 2022-08-07 - full automation for update changes
 python3 /app/heroku_save_config_pyyaml_files_to_github.py
 
-# /app/startupscript.sh
-# chmod u+r+x
+### /app/startupscript.sh
+### chmod u+r+x
