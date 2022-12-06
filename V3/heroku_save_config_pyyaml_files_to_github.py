@@ -56,4 +56,14 @@ repo.update_file(contents5.path, "Save: config_for_delete_unnecessary_rows_in_vo
 print(content5)
 
 
+contents6 = repo.get_contents("config_for_delete_daily_unnecessary_sheets_py.yaml")
+with open('config_for_delete_daily_unnecessary_sheets_py.yaml', 'r') as file:
+    content6 = file.read()
+
+# update
+repo.update_file(contents6.path, "Save: config_for_delete_daily_unnecessary_sheets_py.yaml", content6, contents6.sha)
+
+print(content6)
+
+
 print("(All Operations - Successfully!)")
