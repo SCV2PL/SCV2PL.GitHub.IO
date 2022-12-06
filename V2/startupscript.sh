@@ -74,7 +74,7 @@ python3 /app/delete_unnecessary_rows_in_today_sheet.py
 # 2022-12-06 - full automation for update changes
 python3 /app/delete_daily_unnecessary_sheets.py
 
-python3 update_n+2_for_config_for_delete_daily_unnecessary_sheets_py.py
+python3 /app/update_n+2_for_config_for_delete_daily_unnecessary_sheets_py.py
 # 2022-08-07 - full automation for update changes
 python3 /app/heroku_save_config_pyyaml_files_to_github.py
 
