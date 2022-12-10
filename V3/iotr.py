@@ -230,6 +230,40 @@ with open("/app/config_for_save_daily_sum_py.yaml", "r") as cr:
 
 c = config_vals['c']
 
+RUN3 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': sheet_id2,
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 0,
+            'endColumnIndex': 4,
+        },
+        "destination": {
+            'sheetId': sheet_id2,
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 0,
+            'endColumnIndex': 4,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request3 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID2, body=RUN3).execute()
+
+print(request3)
+
+
+config_vals = ""
+with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "r") as cr:
+   config_vals = yaml.full_load(cr)
+
+d = config_vals['d']
+
 RUN4 = {'requests': [
     {'copyPaste': {
         'source': {
@@ -237,14 +271,14 @@ RUN4 = {'requests': [
             'startRowIndex': 0,
             'endRowIndex': 29,
             'startColumnIndex': 0,
-            'endColumnIndex': 12,
+            'endColumnIndex': 13,
         },
         "destination": {
-            'sheetId': str(c),
+            'sheetId': str(d),
             'startRowIndex': 0,
             'endRowIndex': 29,
-            'startColumnIndex': 13,
-            'endColumnIndex': 26,
+            'startColumnIndex': 12,
+            'endColumnIndex': 25,
         },
         "pasteType": "Paste_Values",
 
@@ -256,6 +290,10 @@ request4 = service.spreadsheets().batchUpdate(
         spreadsheetId=SPREADSHEET_ID2, body=RUN4).execute()
 
 print(request4)
+
+config_vals['d'] = d + 1
+with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
+   yaml.dump(config_vals, cw, default_flow_style=True)
 
 
 print("(All Operations - Successfully!)")
