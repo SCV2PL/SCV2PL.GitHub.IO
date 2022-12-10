@@ -1,8 +1,10 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 from datetime import datetime, timedelta
+import time
+import yaml
 
-SERVICE_ACCOUNT_FILE = '/home/blox_land/scv2pl/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -67,11 +69,54 @@ yesterday18 = datetime.today() - timedelta(days=18)
 t = yesterday18.strftime('%Y-%m-%d')
 
 yesterday19 = datetime.today() - timedelta(days=19)
-u = yesterday19.strftime('%Y-%m-%d')   
+u = yesterday19.strftime('%Y-%m-%d')
+
+yesterday20 = datetime.today() - timedelta(days=20)
+v = yesterday20.strftime('%Y-%m-%d')
+
+yesterday21 = datetime.today() - timedelta(days=21)
+w = yesterday21.strftime('%Y-%m-%d')
+
+yesterday22 = datetime.today() - timedelta(days=22)
+x = yesterday22.strftime('%Y-%m-%d')
+
+yesterday23 = datetime.today() - timedelta(days=23)
+y = yesterday23.strftime('%Y-%m-%d')
+
+yesterday24 = datetime.today() - timedelta(days=24)
+z = yesterday24.strftime('%Y-%m-%d')
+
+yesterday25 = datetime.today() - timedelta(days=25)
+aa = yesterday25.strftime('%Y-%m-%d')
+
+yesterday26 = datetime.today() - timedelta(days=26)
+ab = yesterday26.strftime('%Y-%m-%d')
+
+yesterday27 = datetime.today() - timedelta(days=27)
+ac = yesterday27.strftime('%Y-%m-%d')
+
+yesterday28 = datetime.today() - timedelta(days=28)
+ad = yesterday28.strftime('%Y-%m-%d')
+
+yesterday29 = datetime.today() - timedelta(days=29)
+ae = yesterday29.strftime('%Y-%m-%d')
+
+yesterday30 = datetime.today() - timedelta(days=30)
+af = yesterday30.strftime('%Y-%m-%d')
+
+yesterday31 = datetime.today() - timedelta(days=31)
+ag = yesterday31.strftime('%Y-%m-%d')
+
+yesterday32 = datetime.today() - timedelta(days=32)
+ah = yesterday32.strftime('%Y-%m-%d')
+
+yesterday33 = datetime.today() - timedelta(days=33)
+ai = yesterday33.strftime('%Y-%m-%d')  
     
 
 SPREADSHEET_ID1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
 SPREADSHEET_ID2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
+sheet_id2 = '934571935'
 
 service = build('sheets', 'v4', credentials=creds)
 
@@ -82,23 +127,58 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID1,
                             range="O!A1").execute()
 values = result.get('values', [])
 
-RUN1 = [["=({'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2})/7","=({'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2})/7","=({'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2})/7"]]
+RUN1 = [["=({'"+str(ai)+"'!D2}+{'"+str(ah)+"'!D2}+{'"+str(ag)+"'!D2}+{'"+str(af)+"'!D2}+{'"+str(ae)+"'!D2}+{'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2})/7","=({'"+str(ai)+"'!K2}+{'"+str(ah)+"'!K2}+{'"+str(ag)+"'!K2}+{'"+str(af)+"'!K2}+{'"+str(ae)+"'!K2}+{'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2})/7","=({'"+str(ai)+"'!N2}+{'"+str(ah)+"'!N2}+{'"+str(ag)+"'!N2}+{'"+str(af)+"'!N2}+{'"+str(ae)+"'!N2}+{'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2})/7"],
+["=({'"+str(ah)+"'!D2}+{'"+str(ag)+"'!D2}+{'"+str(af)+"'!D2}+{'"+str(ae)+"'!D2}+{'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2})/7","=({'"+str(ah)+"'!K2}+{'"+str(ag)+"'!K2}+{'"+str(af)+"'!K2}+{'"+str(ae)+"'!K2}+{'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2})/7","=({'"+str(ah)+"'!N2}+{'"+str(ag)+"'!N2}+{'"+str(af)+"'!N2}+{'"+str(ae)+"'!N2}+{'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2})/7"],
+["=({'"+str(ag)+"'!D2}+{'"+str(af)+"'!D2}+{'"+str(ae)+"'!D2}+{'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2})/7","=({'"+str(ag)+"'!K2}+{'"+str(af)+"'!K2}+{'"+str(ae)+"'!K2}+{'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2})/7","=({'"+str(ag)+"'!N2}+{'"+str(af)+"'!N2}+{'"+str(ae)+"'!N2}+{'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2})/7"],
+["=({'"+str(af)+"'!D2}+{'"+str(ae)+"'!D2}+{'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2})/7","=({'"+str(af)+"'!K2}+{'"+str(ae)+"'!K2}+{'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2})/7","=({'"+str(af)+"'!N2}+{'"+str(ae)+"'!N2}+{'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2})/7"],
+["=({'"+str(ae)+"'!D2}+{'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2}+{'"+str(y)+"'!D2})/7","=({'"+str(ae)+"'!K2}+{'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2}+{'"+str(y)+"'!K2})/7","=({'"+str(ae)+"'!N2}+{'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2}+{'"+str(y)+"'!N2})/7"],
+["=({'"+str(ad)+"'!D2}+{'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2}+{'"+str(y)+"'!D2}+{'"+str(x)+"'!D2})/7","=({'"+str(ad)+"'!K2}+{'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2}+{'"+str(y)+"'!K2}+{'"+str(x)+"'!K2})/7","=({'"+str(ad)+"'!N2}+{'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2}+{'"+str(y)+"'!N2}+{'"+str(x)+"'!N2})/7"],
+["=({'"+str(ac)+"'!D2}+{'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2}+{'"+str(y)+"'!D2}+{'"+str(x)+"'!D2}+{'"+str(w)+"'!D2})/7","=({'"+str(ac)+"'!K2}+{'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2}+{'"+str(y)+"'!K2}+{'"+str(x)+"'!K2}+{'"+str(w)+"'!K2})/7","=({'"+str(ac)+"'!N2}+{'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2}+{'"+str(y)+"'!N2}+{'"+str(x)+"'!N2}+{'"+str(w)+"'!N2})/7"],
+["=({'"+str(ab)+"'!D2}+{'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2}+{'"+str(y)+"'!D2}+{'"+str(x)+"'!D2}+{'"+str(w)+"'!D2}+{'"+str(v)+"'!D2})/7","=({'"+str(ab)+"'!K2}+{'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2}+{'"+str(y)+"'!K2}+{'"+str(x)+"'!K2}+{'"+str(w)+"'!K2}+{'"+str(v)+"'!K2})/7","=({'"+str(ab)+"'!N2}+{'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2}+{'"+str(y)+"'!N2}+{'"+str(x)+"'!N2}+{'"+str(w)+"'!N2}+{'"+str(v)+"'!N2})/7"],
+["=({'"+str(aa)+"'!D2}+{'"+str(z)+"'!D2}+{'"+str(y)+"'!D2}+{'"+str(x)+"'!D2}+{'"+str(w)+"'!D2}+{'"+str(v)+"'!D2}+{'"+str(u)+"'!D2})/7","=({'"+str(aa)+"'!K2}+{'"+str(z)+"'!K2}+{'"+str(y)+"'!K2}+{'"+str(x)+"'!K2}+{'"+str(w)+"'!K2}+{'"+str(v)+"'!K2}+{'"+str(u)+"'!K2})/7","=({'"+str(aa)+"'!N2}+{'"+str(z)+"'!N2}+{'"+str(y)+"'!N2}+{'"+str(x)+"'!N2}+{'"+str(w)+"'!N2}+{'"+str(v)+"'!N2}+{'"+str(u)+"'!N2})/7"],
+["=({'"+str(z)+"'!D2}+{'"+str(y)+"'!D2}+{'"+str(x)+"'!D2}+{'"+str(w)+"'!D2}+{'"+str(v)+"'!D2}+{'"+str(u)+"'!D2}+{'"+str(t)+"'!D2})/7","=({'"+str(z)+"'!K2}+{'"+str(y)+"'!K2}+{'"+str(x)+"'!K2}+{'"+str(w)+"'!K2}+{'"+str(v)+"'!K2}+{'"+str(u)+"'!K2}+{'"+str(t)+"'!K2})/7","=({'"+str(z)+"'!N2}+{'"+str(y)+"'!N2}+{'"+str(x)+"'!N2}+{'"+str(w)+"'!N2}+{'"+str(v)+"'!N2}+{'"+str(u)+"'!N2}+{'"+str(t)+"'!N2})/7"],
+["=({'"+str(y)+"'!D2}+{'"+str(x)+"'!D2}+{'"+str(w)+"'!D2}+{'"+str(v)+"'!D2}+{'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2})/7","=({'"+str(y)+"'!K2}+{'"+str(x)+"'!K2}+{'"+str(w)+"'!K2}+{'"+str(v)+"'!K2}+{'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2})/7","=({'"+str(y)+"'!N2}+{'"+str(x)+"'!N2}+{'"+str(w)+"'!N2}+{'"+str(v)+"'!N2}+{'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2})/7"],
+["=({'"+str(x)+"'!D2}+{'"+str(w)+"'!D2}+{'"+str(v)+"'!D2}+{'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2})/7","=({'"+str(x)+"'!K2}+{'"+str(w)+"'!K2}+{'"+str(v)+"'!K2}+{'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2})/7","=({'"+str(x)+"'!N2}+{'"+str(w)+"'!N2}+{'"+str(v)+"'!N2}+{'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2})/7"],
+["=({'"+str(w)+"'!D2}+{'"+str(v)+"'!D2}+{'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2})/7","=({'"+str(w)+"'!K2}+{'"+str(v)+"'!K2}+{'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2})/7","=({'"+str(w)+"'!N2}+{'"+str(v)+"'!N2}+{'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2})/7"],
+["=({'"+str(v)+"'!D2}+{'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2})/7","=({'"+str(v)+"'!K2}+{'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2})/7","=({'"+str(v)+"'!N2}+{'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2})/7"],
+["=({'"+str(u)+"'!D2}+{'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2})/7","=({'"+str(u)+"'!K2}+{'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2})/7","=({'"+str(u)+"'!N2}+{'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2})/7"],
+["=({'"+str(t)+"'!D2}+{'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2}+{'"+str(m)+"'!D2})/7","=({'"+str(t)+"'!K2}+{'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2}+{'"+str(m)+"'!K2})/7","=({'"+str(t)+"'!N2}+{'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2}+{'"+str(m)+"'!N2})/7"],
+["=({'"+str(s)+"'!D2}+{'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2}+{'"+str(m)+"'!D2}+{'"+str(l)+"'!D2})/7","=({'"+str(s)+"'!K2}+{'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2}+{'"+str(m)+"'!K2}+{'"+str(l)+"'!K2})/7","=({'"+str(s)+"'!N2}+{'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2}+{'"+str(m)+"'!N2}+{'"+str(l)+"'!N2})/7"],
+["=({'"+str(r)+"'!D2}+{'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2}+{'"+str(m)+"'!D2}+{'"+str(l)+"'!D2}+{'"+str(k)+"'!D2})/7","=({'"+str(r)+"'!K2}+{'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2}+{'"+str(m)+"'!K2}+{'"+str(l)+"'!K2}+{'"+str(k)+"'!K2})/7","=({'"+str(r)+"'!N2}+{'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2}+{'"+str(m)+"'!N2}+{'"+str(l)+"'!N2}+{'"+str(k)+"'!N2})/7"],
+["=({'"+str(p)+"'!D2}+{'"+str(o)+"'!D2}+{'"+str(n)+"'!D2}+{'"+str(m)+"'!D2}+{'"+str(l)+"'!D2}+{'"+str(k)+"'!D2}+{'"+str(j)+"'!D2})/7","=({'"+str(p)+"'!K2}+{'"+str(o)+"'!K2}+{'"+str(n)+"'!K2}+{'"+str(m)+"'!K2}+{'"+str(l)+"'!K2}+{'"+str(k)+"'!K2}+{'"+str(j)+"'!K2})/7","=({'"+str(p)+"'!N2}+{'"+str(o)+"'!N2}+{'"+str(n)+"'!N2}+{'"+str(m)+"'!N2}+{'"+str(l)+"'!N2}+{'"+str(k)+"'!N2}+{'"+str(j)+"'!N2})/7"],
+["=({'"+str(o)+"'!D2}+{'"+str(n)+"'!D2}+{'"+str(m)+"'!D2}+{'"+str(l)+"'!D2}+{'"+str(k)+"'!D2}+{'"+str(j)+"'!D2}+{'"+str(i)+"'!D2})/7","=({'"+str(o)+"'!K2}+{'"+str(n)+"'!K2}+{'"+str(m)+"'!K2}+{'"+str(l)+"'!K2}+{'"+str(k)+"'!K2}+{'"+str(j)+"'!K2}+{'"+str(i)+"'!K2})/7","=({'"+str(o)+"'!N2}+{'"+str(n)+"'!N2}+{'"+str(m)+"'!N2}+{'"+str(l)+"'!N2}+{'"+str(k)+"'!N2}+{'"+str(j)+"'!N2}+{'"+str(i)+"'!N2})/7"]]
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID1,
                                                   range="O!A1", valueInputOption="USER_ENTERED",
                                                   body={"values": RUN1}).execute()
+                                                  
+print(request1)
                                                   
                                   
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID2,
                             range="14D TREND - avrxypl-iot!A2").execute()
 values = result.get('values', [])
 
-RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A1:C1")',"","",str(n)],
-["=({'"+str(t)+"'!E2}+{'"+str(s)+"'!E2}+{'"+str(r)+"'!E2}+{'"+str(p)+"'!E2}+{'"+str(o)+"'!E2}+{'"+str(n)+"'!E2}+{'"+str(m)+"'!E2})/7","=({'"+str(t)+"'!L2}+{'"+str(s)+"'!L2}+{'"+str(r)+"'!L2}+{'"+str(p)+"'!L2}+{'"+str(o)+"'!L2}+{'"+str(n)+"'!L2}+{'"+str(m)+"'!L2})/7","=({'"+str(t)+"'!O2}+{'"+str(s)+"'!O2}+{'"+str(r)+"'!O2}+{'"+str(p)+"'!O2}+{'"+str(o)+"'!O2}+{'"+str(n)+"'!O2}+{'"+str(m)+"'!O2})/7",str(m)],
-["=({'"+str(s)+"'!E2}+{'"+str(r)+"'!E2}+{'"+str(p)+"'!E2}+{'"+str(o)+"'!E2}+{'"+str(n)+"'!E2}+{'"+str(m)+"'!E2}+{'"+str(l)+"'!E2})/7","=({'"+str(s)+"'!L2}+{'"+str(r)+"'!L2}+{'"+str(p)+"'!L2}+{'"+str(o)+"'!L2}+{'"+str(n)+"'!L2}+{'"+str(m)+"'!L2}+{'"+str(l)+"'!L2})/7","=({'"+str(s)+"'!O2}+{'"+str(r)+"'!O2}+{'"+str(p)+"'!O2}+{'"+str(o)+"'!O2}+{'"+str(n)+"'!O2}+{'"+str(m)+"'!O2}+{'"+str(l)+"'!O2})/7",str(l)],
-["=({'"+str(r)+"'!E2}+{'"+str(p)+"'!E2}+{'"+str(o)+"'!E2}+{'"+str(n)+"'!E2}+{'"+str(m)+"'!E2}+{'"+str(l)+"'!E2}+{'"+str(k)+"'!E2})/7","=({'"+str(r)+"'!L2}+{'"+str(p)+"'!L2}+{'"+str(o)+"'!L2}+{'"+str(n)+"'!L2}+{'"+str(m)+"'!L2}+{'"+str(l)+"'!L2}+{'"+str(k)+"'!L2})/7","=({'"+str(r)+"'!O2}+{'"+str(p)+"'!O2}+{'"+str(o)+"'!O2}+{'"+str(n)+"'!O2}+{'"+str(m)+"'!O2}+{'"+str(l)+"'!O2}+{'"+str(k)+"'!O2})/7",str(k)],
-["=({'"+str(p)+"'!E2}+{'"+str(o)+"'!E2}+{'"+str(n)+"'!E2}+{'"+str(m)+"'!E2}+{'"+str(l)+"'!E2}+{'"+str(k)+"'!E2}+{'"+str(j)+"'!E2})/7","=({'"+str(p)+"'!L2}+{'"+str(o)+"'!L2}+{'"+str(n)+"'!L2}+{'"+str(m)+"'!L2}+{'"+str(l)+"'!L2}+{'"+str(k)+"'!L2}+{'"+str(j)+"'!L2})/7","=({'"+str(p)+"'!O2}+{'"+str(o)+"'!O2}+{'"+str(n)+"'!O2}+{'"+str(m)+"'!O2}+{'"+str(l)+"'!O2}+{'"+str(k)+"'!O2}+{'"+str(j)+"'!O2})/7",str(j)],
-["=({'"+str(o)+"'!E2}+{'"+str(n)+"'!E2}+{'"+str(m)+"'!E2}+{'"+str(l)+"'!E2}+{'"+str(k)+"'!E2}+{'"+str(j)+"'!E2}+{'"+str(i)+"'!E2})/7","=({'"+str(o)+"'!L2}+{'"+str(n)+"'!L2}+{'"+str(m)+"'!L2}+{'"+str(l)+"'!L2}+{'"+str(k)+"'!L2}+{'"+str(j)+"'!L2}+{'"+str(i)+"'!L2})/7","=({'"+str(o)+"'!O2}+{'"+str(n)+"'!O2}+{'"+str(m)+"'!O2}+{'"+str(l)+"'!O2}+{'"+str(k)+"'!O2}+{'"+str(j)+"'!O2}+{'"+str(i)+"'!O2})/7",str(i)],
+RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A1:C1")',"","",str(ac)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A2:C2")',"","",str(ab)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A1:C1")',"","",str(aa)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A2:C2")',"","",str(z)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A3:C3")',"","",str(y)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A4:C4")',"","",str(x)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A5:C5")',"","",str(w)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A6:C6")',"","",str(v)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A1:C1")',"","",str(u)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A2:C2")',"","",str(t)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A3:C3")',"","",str(s)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A4:C4")',"","",str(r)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A5:C5")',"","",str(p)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A6:C6")',"","",str(o)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A1:C1")',"","",str(n)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A2:C2")',"","",str(m)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A3:C3")',"","",str(l)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A4:C4")',"","",str(k)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A5:C5")',"","",str(j)],
+['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g","O!A6:C6")',"","",str(i)],
 ["=({'"+str(n)+"'!E2}+{'"+str(m)+"'!E2}+{'"+str(l)+"'!E2}+{'"+str(k)+"'!E2}+{'"+str(j)+"'!E2}+{'"+str(i)+"'!E2}+{'"+str(h)+"'!E2})/7","=({'"+str(n)+"'!L2}+{'"+str(m)+"'!L2}+{'"+str(l)+"'!L2}+{'"+str(k)+"'!L2}+{'"+str(j)+"'!L2}+{'"+str(i)+"'!L2}+{'"+str(h)+"'!L2})/7","=({'"+str(n)+"'!O2}+{'"+str(m)+"'!O2}+{'"+str(l)+"'!O2}+{'"+str(k)+"'!O2}+{'"+str(j)+"'!O2}+{'"+str(i)+"'!O2}+{'"+str(h)+"'!O2})/7",str(h)],
 ["=({'"+str(m)+"'!E2}+{'"+str(l)+"'!E2}+{'"+str(k)+"'!E2}+{'"+str(j)+"'!E2}+{'"+str(i)+"'!E2}+{'"+str(h)+"'!E2}+{'"+str(g)+"'!E2})/7","=({'"+str(m)+"'!L2}+{'"+str(l)+"'!L2}+{'"+str(k)+"'!L2}+{'"+str(j)+"'!L2}+{'"+str(i)+"'!L2}+{'"+str(h)+"'!L2}+{'"+str(g)+"'!L2})/7","=({'"+str(m)+"'!O2}+{'"+str(l)+"'!O2}+{'"+str(k)+"'!O2}+{'"+str(j)+"'!O2}+{'"+str(i)+"'!O2}+{'"+str(h)+"'!O2}+{'"+str(g)+"'!O2})/7",str(g)],
 ["=({'"+str(l)+"'!E2}+{'"+str(k)+"'!E2}+{'"+str(j)+"'!E2}+{'"+str(i)+"'!E2}+{'"+str(h)+"'!E2}+{'"+str(g)+"'!E2}+{'"+str(f)+"'!E2})/7","=({'"+str(l)+"'!L2}+{'"+str(k)+"'!L2}+{'"+str(j)+"'!L2}+{'"+str(i)+"'!L2}+{'"+str(h)+"'!L2}+{'"+str(g)+"'!L2}+{'"+str(f)+"'!L2})/7","=({'"+str(l)+"'!O2}+{'"+str(k)+"'!O2}+{'"+str(j)+"'!O2}+{'"+str(i)+"'!O2}+{'"+str(h)+"'!O2}+{'"+str(g)+"'!O2}+{'"+str(f)+"'!O2})/7",str(f)],
@@ -111,3 +191,71 @@ RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_Avm
 request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID2,
                                                   range="14D TREND - avrxypl-iot!A2", valueInputOption="USER_ENTERED",
                                                   body={"values": RUN2}).execute()
+                                                  
+time.sleep(45)
+print(request2)
+
+
+RUN3 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': sheet_id2,
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 0,
+            'endColumnIndex': 4,
+        },
+        "destination": {
+            'sheetId': sheet_id2,
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 0,
+            'endColumnIndex': 4,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request3 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID2, body=RUN3).execute()
+
+print(request3)
+
+
+config_vals = ""
+with open("/app/config_for_save_daily_sum_py.yaml", "r") as cr:
+   config_vals = yaml.full_load(cr)
+
+c = config_vals['c']
+
+RUN4 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': sheet_id2,
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 0,
+            'endColumnIndex': 12,
+        },
+        "destination": {
+            'sheetId': str(c),
+            'startRowIndex': 0,
+            'endRowIndex': 29,
+            'startColumnIndex': 13,
+            'endColumnIndex': 26,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request4 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID2, body=RUN4).execute()
+
+print(request4)
+
+
+print("(All Operations - Successfully!)")

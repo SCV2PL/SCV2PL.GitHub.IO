@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import time
 import yaml
 
-SERVICE_ACCOUNT_FILE = '/home/blox_land/Desktop/SCV2PL/sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = None
@@ -21,7 +21,7 @@ sheet = service.spreadsheets()
 
 
 config_vals = ""
-with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "r") as cr:
+with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "r") as cr:
    config_vals = yaml.full_load(cr)
 
 n = config_vals['n']
@@ -30,7 +30,7 @@ n = config_vals['n']
 while n > 0:
 
   config_vals = ""
-  with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "r") as cr:
+  with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "r") as cr:
      config_vals = yaml.full_load(cr)
 
   a = config_vals['a']
@@ -91,19 +91,19 @@ while n > 0:
   
   
   config_vals['a'] = a + 1
-  with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True)
   
   config_vals['b'] = b - 1
-  with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True)
 
   config_vals['c'] = c - 1
-  with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True)
   
   config_vals['n'] = n - 1
-  with open("/home/blox_land/Desktop/SCV2PL/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
+  with open("/app/config_for_delete_daily_unnecessary_sheets_py.yaml", "w") as cw:
      yaml.dump(config_vals, cw, default_flow_style=True)
 
 
@@ -113,6 +113,6 @@ while n > 0:
   
   print("EXIT...")
   
-# 235! skip to 237
-
   break #exit
+        
+# 235! skip to 237
