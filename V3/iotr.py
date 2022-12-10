@@ -192,7 +192,7 @@ request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID2,
                                                   range="14D TREND - avrxypl-iot!A2", valueInputOption="USER_ENTERED",
                                                   body={"values": RUN2}).execute()
                                                   
-time.sleep(45)
+time.sleep(15)
 print(request2)
 
 
