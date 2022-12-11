@@ -26,14 +26,14 @@ repo.update_file(contents2.path, "Save: config_for_save_daily_sum_py.yaml", cont
 print(content2)
 
 
-"""contents3 = repo.get_contents("config_for_update_avr7d_array_range_7d_py.yaml")
+contents3 = repo.get_contents("config_for_update_avr7d_array_range_7d_py.yaml")
 with open('config_for_update_avr7d_array_range_7d_py.yaml', 'r') as file:
     content3 = file.read()
 
 # update
 repo.update_file(contents3.path, "Save: config_for_update_avr7d_array_range_7d_py.yaml", content3, contents3.sha)
 
-print(content3)"""
+print(content3)
 
 
 contents4 = repo.get_contents("config_for_update_avr7d_ir28_fdr21_py.yaml")
