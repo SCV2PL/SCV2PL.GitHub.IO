@@ -53,13 +53,13 @@ python3 /app/datawrapper_api_update_external_data.py
 python3 /app/datawrapper_api_republish_set_for_update_Support_-_7DAVRDLR14D_t-t14_range.py
 # for sunday update & cleaning
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
-python3 /app/sunday_update/add_weekly_sheets_set.py
+###python3 /app/sunday_update/add_weekly_sheets_set.py
 # 2022-02-13 09:48:00 UPGRADE_2.0_APP Complete
-python3 /app/sunday_update/update_avr7d_array_range_7d.py
+###python3 /app/sunday_update/update_avr7d_array_range_7d.py
 # 2022-08-07 - full automation for update changes
-python3 /app/delete_weekly_sheets_set_-14-20D_range.py
+###python3 /app/delete_weekly_sheets_set_-14-20D_range.py
 # 2022-08-07 - full automation for update changes
-python3 /app/datawrapper_api_republish_set_for_vacination_booster.py
+###python3 /app/datawrapper_api_republish_set_for_vacination_booster.py
 # for daily cleaning
 # 2022-08-09 - full automation for update changes
 python3 /app/delete_unnecessary_rows_in_today_sheet.py
