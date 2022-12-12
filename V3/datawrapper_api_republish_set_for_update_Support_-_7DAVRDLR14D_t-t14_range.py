@@ -19,6 +19,23 @@ dw.publish_chart(dw_id)
 print(properties)
 
 
+dw_id = 'yUSUL'
+
+properties = dw.chart_properties(dw_id)
+
+dw.publish_chart(dw_id)
+
+print(properties)
+
+dw_id = '6HKut'
+
+properties = dw.chart_properties(dw_id)
+
+dw.publish_chart(dw_id)
+
+print(properties)
+
+
 dw_id = 'JW5zN'
 
 properties = dw.chart_properties(dw_id)
