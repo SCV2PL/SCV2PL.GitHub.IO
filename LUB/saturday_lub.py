@@ -37,7 +37,10 @@ new_file_name = "/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_githu
 os.rename(old_file_name, new_file_name)
 
 
-contents1 = repo.get_contents("/home/blox_land/scv2pl/startupscript.sh")
+time.sleep(5)
+
+
+contents1 = repo.get_contents("startupscript.sh")
 with open('/home/blox_land/scv2pl/startupscript.sh', 'r') as file:
     content1 = file.read()
 
@@ -47,7 +50,7 @@ repo.update_file(contents1.path, "Save: startupscript.sh", content1, contents1.s
 print(content1)
 
 
-contents2 = repo.get_contents("/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_github.py")
+contents2 = repo.get_contents("heroku_save_config_pyyaml_files_to_github.py")
 with open('/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_github.py', 'r') as file:
     content2 = file.read()
 
