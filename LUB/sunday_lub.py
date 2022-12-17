@@ -1,5 +1,16 @@
 # Import the os module
 import os
+from github import Github
+from datetime import datetime
+import time
+import sys
+import shutil
+
+g = Github("********************")
+# or  g = github.Github(login, password)
+
+repo = g.get_user().get_repo("scv2pl")
+
 
 # Set the old and new file names
 old_file_name = "/home/blox_land/scv2pl/startupscript.sh"
@@ -27,5 +38,34 @@ new_file_name = "/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_githu
 os.rename(old_file_name, new_file_name)
 
 
+contents1 = repo.get_contents("/home/blox_land/scv2pl/startupscript.sh")
+with open('/home/blox_land/scv2pl/startupscript.sh', 'r') as file:
+    content1 = file.read()
+
+# update
+repo.update_file(contents1.path, "Save: startupscript.sh", content1, contents1.sha)
+
+print(content1)
 
 
+contents2 = repo.get_contents("/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_github.py")
+with open('/home/blox_land/scv2pl/heroku_save_config_pyyaml_files_to_github.py', 'r') as file:
+    content2 = file.read()
+
+# update
+repo.update_file(contents2.path, "Save: heroku_save_config_pyyaml_files_to_github.py", content2, contents2.sha)
+
+print(content2)
+
+
+time.sleep(240)
+
+
+# Get directory name
+mydir = ("/home/blox_land/scv2pl")
+
+# Try to remove the tree; if it fails, throw an error using try...except.
+try:
+    shutil.rmtree(mydir)
+except OSError as e:
+    print("Error: %s - %s." % (e.filename, e.strerror))
