@@ -3,6 +3,8 @@ import os
 from github import Github
 from datetime import datetime
 import time
+import sys
+import shutil
 
 g = Github("********************")
 # or  g = github.Github(login, password)
@@ -56,3 +58,13 @@ print(content2)
 
 
 time.sleep(240)
+
+
+# Get directory name
+mydir = ("/home/blox_land/scv2pl")
+
+# Try to remove the tree; if it fails, throw an error using try...except.
+try:
+    shutil.rmtree(mydir)
+except OSError as e:
+    print("Error: %s - %s." % (e.filename, e.strerror))
