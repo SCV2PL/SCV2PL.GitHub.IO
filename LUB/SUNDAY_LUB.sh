@@ -1,19 +1,16 @@
 #! /bin/bash
-python3 /home/blox_land/LUB/lub.py
+
+cd LUB
+
+source LUB/bin/activate
+
+python3 /home/blox_land/LUB/sunday_lub.py
+
+cd ..
 
 heroku git:clone -a scv2pl
 
 cd scv2pl
-
-python3 /home/blox_land/LUB/sunday_lub.py
-
-git status
-
-git add .
-
-git commit -am "PUSH"
-
-git push heroku main
 
 git update-index --chmod=+x startupscript.sh
 
