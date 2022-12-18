@@ -60,7 +60,7 @@ repo.update_file(contents2.path, "Save: heroku_save_config_pyyaml_files_to_githu
 print(content2)
 
 
-time.sleep(240)
+time.sleep(180)
 
 
 # Get directory name
