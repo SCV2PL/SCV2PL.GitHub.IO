@@ -327,6 +327,27 @@ request9 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id,
 print(request9)
 
 
+e = b - 1 
+
+RUN10 = {'requests': [
+    {'autoFill': {
+        'range': {
+            'sheetId': sheet_id,
+            'startRowIndex': str(e),
+            'endRowIndex': str(c),
+            'startColumnIndex': 16,
+            'endColumnIndex': 20,
+        },
+
+    }},
+
+]}
+
+request10 = service.spreadsheets().batchUpdate(
+        spreadsheetId=spreadsheet_id, body=RUN10).execute()
+print(request10)
+
+
 config_vals['a'] = a + 7
 with open("/app/config_for_update_avr7d_array_range_7d_py.yaml", "w") as cw:
    yaml.dump(config_vals, cw, default_flow_style=True)
