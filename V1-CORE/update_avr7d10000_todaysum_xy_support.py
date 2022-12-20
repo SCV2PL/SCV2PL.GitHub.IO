@@ -24,23 +24,42 @@ RUN1 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHH
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="TodayCount!D3", valueInputOption="USER_ENTERED", body={"values":RUN1}).execute()
 
-result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
-                            range="TodaySum!D3").execute()
-values = result.get('values', [])
 
-RUN2 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0","TodayCount!D3:D382")']]
-
-request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
-                                                 range="TodaySum!D3", valueInputOption="USER_ENTERED", body={"values":RUN2}).execute()
-                                                 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="TodaySum!H3").execute()
 values = result.get('values', [])
 
-RUN3 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c","XY!C1:C380")']]
+RUN2 = [['=NOW()']]
 
-request3 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
-                                                 range="TodaySum!H3", valueInputOption="USER_ENTERED", body={"values":RUN3}).execute()
+request2 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
+                                                 range="TodaySum!H3", valueInputOption="USER_ENTERED", body={"values":RUN2}).execute()
+                                                 
+RUN3 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': sheet_id,
+            'startRowIndex': 2,
+            'endRowIndex': 3,
+            'startColumnIndex': 7,
+            'endColumnIndex': 8,
+        },
+        "destination": {
+            'sheetId': sheet_id,
+            'startRowIndex': 2,
+            'endRowIndex': 3,
+            'startColumnIndex': 7,
+            'endColumnIndex': 8,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request3 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID, body=RUN3).execute()
+print(request3)
+
                                                  
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="XY!F1").execute()
