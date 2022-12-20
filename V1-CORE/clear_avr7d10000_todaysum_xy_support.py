@@ -21,8 +21,8 @@ request1 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
 request2 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
                                range="TodaySum!D3:D382").execute()
                                
-request3 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
-                               range="TodaySum!H3:H382").execute()
+"""request3 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
+                               range="TodaySum!H3:H382").execute()"""
                                
 request4 = sheet.values().clear(spreadsheetId=SPREADSHEET_ID,
                                range="XY!F1:D380").execute()

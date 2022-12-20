@@ -9,6 +9,7 @@ creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 SPREADSHEET_ID = '1t5ndsyAp20qeOgCJrzeT_HUttgfru1SzwrhCFJzsgu0'
+sheet_id = '50471916'
 
 service = build('sheets', 'v4', credentials=creds)
 
@@ -23,6 +24,16 @@ RUN1 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHH
 
 request1 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="TodayCount!D3", valueInputOption="USER_ENTERED", body={"values":RUN1}).execute()
+
+
+result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
+                            range="TodaySum!D3").execute()
+values = result.get('values', [])
+
+RUN11 = [['={TodayCount!D3:D382}']]
+
+request11 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
+                                                 range="TodaySum!D3", valueInputOption="USER_ENTERED", body={"values":RUN11}).execute()
 
 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
@@ -60,7 +71,7 @@ request3 = service.spreadsheets().batchUpdate(
         spreadsheetId=SPREADSHEET_ID, body=RUN3).execute()
 print(request3)
 
-                                                 
+        
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="XY!F1").execute()
 values = result.get('values', [])
