@@ -16,7 +16,7 @@ sheet_id2 = '0'
 
 service = build('sheets', 'v4', credentials=creds)
 
-RUN1 = {'requests': [
+"""RUN1 = {'requests': [
     {'copyPaste': {
         'source': {
             'sheetId': sheet_id1,
@@ -39,7 +39,7 @@ RUN1 = {'requests': [
 ]}
 
 request1 = service.spreadsheets().batchUpdate(
-        spreadsheetId=spreadsheet_id1, body=RUN1).execute()
+        spreadsheetId=spreadsheet_id1, body=RUN1).execute()"""
 
 RUN2 = {'requests': [
     {'copyPaste': {
