@@ -30,10 +30,38 @@ result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
                             range="TodaySum!D3").execute()
 values = result.get('values', [])
 
-RUN11 = [['={TodayCount!D3:D382}']]
+RUN11 = [['=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c","TodayCount!D3:D382")']]
 
 request11 = service.spreadsheets().values().update(spreadsheetId=SPREADSHEET_ID,
                                                  range="TodaySum!D3", valueInputOption="USER_ENTERED", body={"values":RUN11}).execute()
+
+time.sleep(20)
+
+
+RUN111 = {'requests': [
+    {'copyPaste': {
+        'source': {
+            'sheetId': sheet_id,
+            'startRowIndex': 2,
+            'endRowIndex': 382,
+            'startColumnIndex': 3,
+            'endColumnIndex': 4,
+        },
+        "destination": {
+            'sheetId': sheet_id,
+            'startRowIndex': 2,
+            'endRowIndex': 382,
+            'startColumnIndex': 3,
+            'endColumnIndex': 4,
+        },
+        "pasteType": "Paste_Values",
+
+    }},
+
+]}
+
+request111 = service.spreadsheets().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID, body=RUN111).execute()
 
 
 result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
