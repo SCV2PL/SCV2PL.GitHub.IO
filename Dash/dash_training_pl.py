@@ -23,14 +23,15 @@ colors = {
 df = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vT9R_mgljVOgzZIxM486fwlpk3WP10CA-rkZvfVIDNU2DqxL3gu7RRL7szZbZshWP8hcW2qKQPLJkBo/pub?gid=308673085&single=true&output=csv')
 
 fig = px.scatter(df, x="% Zaszczepionych", y="Zgony / 10000 mieszkańców",
-                 size="Populacja / 10000", color="Województwo", hover_name="Powiat",
-                 log_x=True, size_max=60)
+                 size="Populacja / 10000", color="Województwo", hover_name="Powiat", title="2021-12-30",
+                 size_max=60, range_x=[25,75], range_y=[0,4.5],)
                  
 fig.update_layout(
     plot_bgcolor=colors['background'],
     paper_bgcolor=colors['background'],
     font_color=colors['text']
 )
+
 
 fig.write_html(buffer)
                  
@@ -57,4 +58,4 @@ app.layout = html.Div([
 if __name__ == '__main__':
     app.run_server(debug=True)
     
-# python3 /home/luke_blue/Startup_Files/training/dash_training_pl.py
+# https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c/edit#gid=308673085
