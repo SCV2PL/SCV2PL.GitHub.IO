@@ -11,5 +11,3 @@ https://github.com/plotly/plotly.py/blob/master/LICENSE.txt
 https://github.com/plotly/dash/blob/dev/LICENSE
 
 # ✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
-
-<hr>
