@@ -11,10 +11,10 @@ creds = service_account.Credentials.from_service_account_file(
         
 a = datetime.today().strftime('%Y%m%d') #'20220208'
 b = datetime.today().strftime('%Y-%m-%d') #'2022-02-08'
-spreadsheet_id1 = '10IihGZQUK1GYqEkjUrk6rCUfA53iDp936uwOfCn1IFk'
+spreadsheet_id1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
 sheet_id1 = a
 
-spreadsheet_id2 = '1uBSAvLRf9lZLKCaK5SYZsf3JmsDVuTVgSZkQJyMmu64'
+spreadsheet_id2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
 sheet_id2 = a
 
 service = build('sheets', 'v4', credentials=creds)
