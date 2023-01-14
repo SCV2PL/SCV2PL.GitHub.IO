@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 
 SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
+
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 creds = service_account.Credentials.from_service_account_file(
@@ -32,7 +33,7 @@ request1 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
                                                   range=""+str(b)+"!A1",
                                                   valueInputOption="USER_ENTERED",
                                                   body={"values": RUN1}).execute()
-time.sleep(6)
+time.sleep(3)
 print(request1)
 
 RUN2 = {'requests': [
@@ -95,7 +96,7 @@ request4 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id2,
                                                   range=""+str(b)+"!A1",
                                                   valueInputOption="USER_ENTERED",
                                                   body={"values": RUN4}).execute()
-time.sleep(6)
+time.sleep(3)
 print(request4)
 
 RUN5= {'requests': [
