@@ -4,16 +4,11 @@ from datetime import datetime
 import time
 
 SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
-
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-        
 service = build('sheets', 'v4', credentials=creds)
-
 sheet = service.spreadsheets()
-
 
 voivodeships_data = 'https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file'
 spreadsheet_id1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
@@ -28,7 +23,6 @@ b = datetime.today().strftime('%Y-%m-%d') #'2022-02-08'
 
 
 RUN1 = [['=QUERY(IMPORTDATA("'+str(voivodeships_data)+'";",";";");"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20")']]
-
 request1 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id1,
                                                   range=""+str(b)+"!A1",
                                                   valueInputOption="USER_ENTERED",
@@ -57,7 +51,6 @@ RUN2 = {'requests': [
     }},
 
 ]}
-
 request2 = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id1,
                                               body=RUN2).execute()
 print(request2)
@@ -84,14 +77,12 @@ RUN3 = {"requests": [
     }},
 
 ]}
-
 request3 = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id1,
                                               body=RUN3).execute()
 print(request3)
 
 
 RUN4 = [['=QUERY(IMPORTDATA("'+str(districts_data)+'",",";";"),"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20,Col21")']]
-
 request4 = service.spreadsheets().values().update(spreadsheetId=spreadsheet_id2,
                                                   range=""+str(b)+"!A1",
                                                   valueInputOption="USER_ENTERED",
@@ -120,7 +111,6 @@ RUN5= {'requests': [
     }},
 
 ]}
-
 request5 = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id2,
                                               body=RUN5).execute()
 print(request5)
@@ -147,7 +137,6 @@ RUN6 = {"requests": [
     }},
 
 ]}
-
 request6 = service.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id2,
                                               body=RUN6).execute()
 print(request6)
