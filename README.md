@@ -1,6 +1,54 @@
-# SCV2PL.GitHub.IO
+# SARS-CoV-2 Poland - "EPIDEMIC" App
 
-Google Sheets for this project: https://lukebluelox.github.io/PORTFOLIO/#SCV2-PL
+Good changes generate improvements, verify the knowledge acquired so far - when using it in practice.
+
+In my free time I will improve, correct and speed up my "EPIDEMIC" app regarding the SARS-CoV-2 virus in Poland:
+
+https://scv2pl.github.io/scv2pl-en
+
+Improved file - import_csv_data_from_urls.py:
+
+https://github.com/SCV2PL/SCV2PL.GitHub.IO/blob/main/V3/import_csv_data_from_urls.py
+
+Deprecated unused file - import_csv_data_from_urls_deprecated_2023-01-12.py:
+
+https://github.com/SCV2PL/SCV2PL.GitHub.IO/blob/main/V2_deprecated_unused/import_csv_data_from_urls_deprecated_2023-01-12.py
+
+&
+
+Formula Parse ERROR:
+
+=QUERY(IMPORTDATA("https://api.dane.gov.pl/resources/33186,aktualne-dane-dla-powiatow/file",",",";"),"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20,Col21")
+
+=QUERY(IMPORTDATA("https://api.dane.gov.pl/resources/33186,aktualne-dane-dla-powiatow/file";",";";");"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20,Col21")
+
+Both Formulas work without error for this sheet:
+
+https://docs.google.com/spreadsheets/d/1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c/edit#gid=20230113
+
+To my surprise and searching for the cause of the error - which I spent some time on, for this sheet:
+
+https://docs.google.com/spreadsheets/d/1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g/edit#gid=20230113
+
+Only this formula worked:
+
+=QUERY(IMPORTDATA("https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file";",";";");"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20")
+
+✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
+
+#Python #Django #Ubuntu #Heroku #PostgreSQL #Postgres #SQL #GitHub #ML #AI #RPA
+
+#PORTFOLIO - #OpenToWork
+
+https://blox-land.herokuapp.com
+
+#Plotly #Dash #Datawrapper #GoogleSheets #GoogleCloud #GCP #Data #DataVisualization #DataVisWriter #DataStorytelling #DataApplication #DataApplicationArchitect #DataScience #DataEngineering #DataMining #OpenData #OtwarteDane
+
+Google Sheets for this project: 
+
+https://lukebluelox.github.io/PORTFOLIO/#SCV2-PL
+
+---
 
 https://github.com/datawrapper
 
