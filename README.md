@@ -34,7 +34,9 @@ Only this formula worked:
 
 =QUERY(IMPORTDATA("https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file";",";";");"Select Col2,Col3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Col17,Col18,Col19,Col20")
 
-✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
+https://www.facebook.com/Blue.LOx.2020/posts/pfbid02CZJgCbf6hLWZn4VkVr9S7RcxRjFZB2iQJ7gVzrYuQVL2u3oAfLqYb3kb3YcKkiCul
+
+# ✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
 
 #Python #Django #Ubuntu #Heroku #PostgreSQL #Postgres #SQL #GitHub #ML #AI #RPA
 
