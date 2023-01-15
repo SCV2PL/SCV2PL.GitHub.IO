@@ -1,3 +1,21 @@
+```
+"""PEP 8 – Style Guide for Python Code 
+
+https://peps.python.org/pep-0008
+
+Is this style acceptable by convention and accepted by the community ???
+
+Łukasz "Luke Blue" Andruszkiewicz
+
+✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
+"""
+```
+
+For this my python code example: 
+
+https://github.com/SCV2PL/SCV2PL.GitHub.IO/blob/main/V3/import_csv_data_from_urls.py
+
+---
 # SARS-CoV-2 Poland - "EPIDEMIC" App
 
 Good changes generate improvements, verify the knowledge acquired so far - when using it in practice.
