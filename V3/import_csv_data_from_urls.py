@@ -31,10 +31,12 @@ districts_data = (
     ) 
 spreadsheet_id2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
 
-a = datetime.today().strftime('%Y%m%d') #'20220208'
+# '20220208'
+a = datetime.today().strftime('%Y%m%d')
 sheet_id1 = a
 sheet_id2 = a
-b = datetime.today().strftime('%Y-%m-%d') #'2022-02-08'
+# '2022-02-08'
+b = datetime.today().strftime('%Y-%m-%d')
 
 
 RUN1 = [
