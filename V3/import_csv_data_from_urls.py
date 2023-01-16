@@ -67,9 +67,7 @@ RUN2 = {'requests': [
             'endColumnIndex': 19
         },
         "pasteType": "Paste_Values"
-
     }}
-
 ]}
 request2 = service.spreadsheets().batchUpdate(
     spreadsheetId=spreadsheet_id1,
@@ -94,9 +92,7 @@ RUN3 = {"requests": [
             }
         },
         "fields": "userEnteredFormat.numberFormat"
-
-    }}
-
+   }}
 ]}
 request3 = service.spreadsheets().batchUpdate(
     spreadsheetId=spreadsheet_id1,
@@ -135,9 +131,7 @@ RUN5= {'requests': [
             'endColumnIndex': 20
         },
         "pasteType": "Paste_Values"
-
     }}
-
 ]}
 request5 = service.spreadsheets().batchUpdate(
     spreadsheetId=spreadsheet_id2,
@@ -162,9 +156,7 @@ RUN6 = {"requests": [
             }
         },
         "fields": "userEnteredFormat.numberFormat"
-
     }}
-
 ]}
 request6 = service.spreadsheets().batchUpdate(
     spreadsheetId=spreadsheet_id2,
