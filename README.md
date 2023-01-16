@@ -1,6 +1,8 @@
 ```
 """PEP 8 – Style Guide for Python Code 
+
 https://peps.python.org/pep-0008
+
 Is this style acceptable by convention and accepted by the Python community ???
 Łukasz "Luke Blue" Andruszkiewicz
 ✌💙💚♻️🌌🚀🌎🌍🌏🛰🌌♻️💚💙✌
