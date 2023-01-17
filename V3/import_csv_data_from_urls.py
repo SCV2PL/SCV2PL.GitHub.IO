@@ -15,8 +15,7 @@ SERVICE_ACCOUNT_FILE = '/home/blox_land/Desktop/SCV2PL/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE,
-    scopes=SCOPES
-    )
+    scopes=SCOPES)
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
 
