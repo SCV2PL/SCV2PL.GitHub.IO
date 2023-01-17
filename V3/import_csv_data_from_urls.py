@@ -23,11 +23,14 @@ service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
 
 voivodeships_data = (
-    'https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file')
+    'https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file'
+    )
+
 spreadsheet_id1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
 
 districts_data = (
-    'https://api.dane.gov.pl/resources/33186,aktualne-dane-dla-powiatow/file')
+    'https://api.dane.gov.pl/resources/33186,aktualne-dane-dla-powiatow/file'
+    )
 spreadsheet_id2 = '1JshfkqgC8bLhATHHkN3D5Bto19Sp3BpMBTYuAts5z_c'
 
 # '20220208'
@@ -38,14 +41,14 @@ sheet_id2 = a
 b = datetime.today().strftime('%Y-%m-%d')
 
 RUN1 = [
-    [('=QUERY(IMPORTDATA("'+str(voivodeships_data)+'";",";";");"Select Col2,Co'
-    'l3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col1'
-    '6,Col17,Col18,Col19,Col20")'
-    )]
+    ['=QUERY(IMPORTDATA("'+str(voivodeships_data)+'";",";";");"Select Col2,Col'
+    '3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16'
+    ',Col17,Col18,Col19,Col20")'
+    ]
 ]
 request1 = service.spreadsheets().values().update(
     spreadsheetId=spreadsheet_id1,
-    range="" + str(b) + "!A1",
+    range=""+str(b)+"!A1",
     valueInputOption="USER_ENTERED",
     body={"values": RUN1}).execute()
 time.sleep(3)
@@ -101,14 +104,14 @@ request3 = service.spreadsheets().batchUpdate(
 print(request3)
 
 RUN4 = [
-    [('=QUERY(IMPORTDATA("'+str(districts_data)+'",",";";"),"Select Col2,Col3,'
-    'Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,C'
-    'ol17,Col18,Col19,Col20,Col21")'
-    )]
+    ['=QUERY(IMPORTDATA("'+str(districts_data)+'",",";";"),"Select Col2,Col3,C'
+    'ol4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Co'
+    'l17,Col18,Col19,Col20,Col21")'
+    ]
 ]
 request4 = service.spreadsheets().values().update(
     spreadsheetId=spreadsheet_id2,
-    range="" + str(b) + "!A1",
+    range=""+str(b)+"!A1",
     valueInputOption="USER_ENTERED",
     body={"values": RUN4}).execute()
 time.sleep(3)
