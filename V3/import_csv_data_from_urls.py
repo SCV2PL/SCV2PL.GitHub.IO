@@ -25,7 +25,6 @@ sheet = service.spreadsheets()
 voivodeships_data = (
     'https://api.dane.gov.pl/resources/33185,aktualne-dane-dla-wojewodztw/file'
     )
-
 spreadsheet_id1 = '1_iDGD9XEd5Lw_AvmVo3XkAa4rBstaemnHeLKpyTgt8g'
 
 districts_data = (
