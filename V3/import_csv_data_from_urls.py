@@ -40,7 +40,7 @@ sheet_id2 = a
 b = datetime.today().strftime('%Y-%m-%d')
 
 RUN1 = [
-    ['=QUERY(IMPORTDATA("'+str(voivodeships_data)+'";",";";");"Select Col2,Col'
+    ['=QUERY(IMPORTDATA("'+str(voivodeships_data)+'";";");"Select Col2,Col'
     '3,Col4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16'
     ',Col17,Col18,Col19,Col20")'
     ]
@@ -103,7 +103,7 @@ request3 = service.spreadsheets().batchUpdate(
 print(request3)
 
 RUN4 = [
-    ['=QUERY(IMPORTDATA("'+str(districts_data)+'",",";";"),"Select Col2,Col3,C'
+    ['=QUERY(IMPORTDATA("'+str(districts_data)+'",";"),"Select Col2,Col3,C'
     'ol4,Col5,Col6,Col7,Col8,Col9,Col10,Col11,Col12,Col13,Col14,Col15,Col16,Co'
     'l17,Col18,Col19,Col20,Col21")'
     ]
