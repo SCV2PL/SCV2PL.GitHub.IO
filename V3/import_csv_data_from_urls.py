@@ -11,10 +11,11 @@ Is this style acceptable by convention and accepted by the python community ???
 """
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
-from datetime import timedelta
+from datetime import datetime
 import yaml
+import time
 
-SERVICE_ACCOUNT_FILE = 'sars-cov-2-poland.json'
+SERVICE_ACCOUNT_FILE = '/app/sars-cov-2-poland.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE,
@@ -22,17 +23,17 @@ creds = service_account.Credentials.from_service_account_file(
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
 
-with open("config_create_sheets.yaml", "r") as cr:
+with open("/app/config_create_sheets.yaml", "r") as cr:
     config_vals = yaml.full_load(cr)
-n = config_vals['n']
 Source1 = config_vals['Source1']
 Source2 = config_vals['Source2']
-datetime = config_vals['datetime']
+t = config_vals['datetime']
 spreadsheet_id1 = config_vals['ID1V1']
 spreadsheet_id2 = config_vals['ID2V1']
-day_n = datetime - timedelta(days=n)
-a = day_n.strftime('%Y%m%d')
-b = day_n.strftime('%Y-%m-%d')
+
+date_obj = datetime.strptime(t, "%Y-%m-%d")
+a = int(date_obj.strftime("%Y%m%d"))
+b = t
 print(a)
 print(b)
 filepaths1 = ''+str(Source1)+''+str(a)+'.csv'
@@ -47,6 +48,7 @@ request1 = service.spreadsheets().values().update(
     valueInputOption="USER_ENTERED",
     body={"values": RUN1}).execute()
 print(request1)
+time.sleep(5)
 
 RUN2 = {'requests': [
     {'copyPaste': {
@@ -120,6 +122,7 @@ request4 = service.spreadsheets().values().update(
     valueInputOption="USER_ENTERED",
     body={"values": RUN4}).execute()
 print(request4)
+time.sleep(10)
 
 RUN5 = {'requests': [
     {'copyPaste': {
