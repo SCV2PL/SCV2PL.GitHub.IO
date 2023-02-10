@@ -38,7 +38,7 @@ color: red;
 .link1 {text-decoration: none;
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #169dd5;
 }
 
@@ -51,7 +51,7 @@ color:red;
 text-decoration: none;
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #98c13d;
 }
 
@@ -63,14 +63,14 @@ color: red;
 .english {
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #169dd5
 }
 
 .polish {
 font-weight: 500;
 font-family: "Arial";
-font-size: 22px;
+font-size: 18px;
 color: #98c13d
 }
 
@@ -90,7 +90,7 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -116,7 +116,7 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -142,7 +142,7 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
@@ -168,7 +168,7 @@ background-color: #98c13d !important;
     text-decoration: none;
     display: inline-block;
     font-family: "Arial";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     margin: 4px 2px;
     cursor: pointer;
