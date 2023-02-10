@@ -37,7 +37,7 @@ color: red;
 
 .link1 {text-decoration: none;
 font-weight: 400;
-font-family: "Ubuntu";
+font-family: "Arial";
 font-size: 22px;
 color: #169dd5;
 }
@@ -50,7 +50,7 @@ color:red;
 .link2 {
 text-decoration: none;
 font-weight: 400;
-font-family: "Ubuntu";
+font-family: "Arial";
 font-size: 22px;
 color: #98c13d;
 }
@@ -62,7 +62,7 @@ color: red;
 
 .english.h {
 font-weight: 400;
-font-family: "Ubuntu";
+font-family: "Arial";
 font-size: 24px;
 color: #169dd5;
 
@@ -70,14 +70,14 @@ color: #169dd5;
 
 .english {
 font-weight: 400;
-font-family: "Ubuntu";
+font-family: "Arial";
 font-size: 22px;
 color: #169dd5
 }
 
 .polish {
 font-weight: 400;
-font-family: "Ubuntu";
+font-family: "Arial";
 font-size: 22px;
 color: #98c13d
 }
@@ -97,7 +97,7 @@ background-color: #98c13d !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: "Ubuntu";
+    font-family: "Arial";
     font-size: 22px;
     font-weight: 400;
     margin: 4px 2px;
@@ -123,7 +123,7 @@ background-color: #98c13d !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: "Ubuntu";
+    font-family: "Arial";
     font-size: 22px;
     font-weight: 400;
     margin: 4px 2px;
@@ -149,7 +149,7 @@ background-color: #98c13d !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: "Ubuntu";
+    font-family: "Arial";
     font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
@@ -175,7 +175,7 @@ background-color: #98c13d !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: "Ubuntu";
+    font-family: "Arial";
     font-size: 22px;
     font-weight: 500;
     margin: 4px 2px;
@@ -234,7 +234,7 @@ width: 90%;
   color: red;
   padding: 20px 20px;
   text-decoration: none;
-  font-family: "Ubuntu";
+  font-family: "Arial";
   font-size: 30px;
   font-weight: 600;
   display: block;
