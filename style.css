@@ -64,7 +64,7 @@ color: #98c13d;
 }
 
 .link2:hover {
-color: red;
+color: #dc143c;
 }
 
 
@@ -115,8 +115,8 @@ background-color: #98c13d !important;
 
 .button1:hover {
     background-color: #313b4e;
-    color: red;
-    border: 3px solid red;
+    color: #dc143c;
+    border: 3px solid #dc143c;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -141,8 +141,8 @@ background-color: #98c13d !important;
 
 .button2:hover {
     background-color: #313b4e;
-    color: red;
-    border: 3px solid red;
+    color: #dc143c;
+    border: 3px solid #dc143c;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -167,8 +167,8 @@ background-color: #98c13d !important;
 
 .button3:hover {
     background-color: #313b4e;
-    color: red;
-    border: 3px solid red;
+    color: #dc143c;
+    border: 3px solid #dc143c;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -193,8 +193,8 @@ background-color: #98c13d !important;
 
 .button4:hover {
     background-color: #313b4e;
-    color: red;
-    border: 3px solid red;
+    color: #dc143c;
+    border: 3px solid #dc143c;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -222,7 +222,7 @@ width: 90%;
 
 #myBtn:hover {
   background-color: #98c13d;  
-  color: red;
+  color: #dc143c;
   border: 3px solid white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -382,7 +382,7 @@ iframe {
 }
 
 .iconframe:hover {
-    border: 1px solid red;
+    border: 1px solid #dc143c;
 }
 
 
@@ -397,7 +397,7 @@ iframe {
     
 .menutable {
     border-collapse: collapse;
-    border: 1px solid red;
+    border: 1px solid #dc143c;
     left: 0px;
     min-width: 650px;
     width: 100%;
@@ -417,7 +417,7 @@ iframe {
 
 .imglink:hover {
     text-decoration: none;
-    color: red;
+    color: #dc143c;
     font-size: 18px;
     font-weight: 500;
 }
