@@ -1,15 +1,15 @@
 .hr1 {
 background: white;
-height: 10px;
-border: 0px;
+height: 20px;
+border: 1px;
 /*line-height: 0px;*/
 margin: 0px 0px;
 }
 
 .hr2 {
-background: red;
-height: 10px;
-border: 0px;
+background: #dc143c;
+height: 20px;
+border: 1px;
 /*line-height: 0px;*/
 margin: 0px 0px;
 }
@@ -86,7 +86,7 @@ color: #169dd5
 font-weight: 400;
 font-family: "Ubuntu";
 font-size: 22px;
-color: #E9E8E7
+color: #98c13d
 }
 
 audio::-webkit-media-controls-panel {
